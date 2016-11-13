@@ -1,3 +1,8 @@
+* {
+	font-family: "Roboto";
+	font-weight: 300;
+}
+@import "../../bower_components/materialize/sass/materialize.scss";
 @import "partials/_header.scss";
 @import "partials/_content.scss";
 @import "partials/_footer.scss";

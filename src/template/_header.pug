@@ -1,0 +1,51 @@
+nav
+	.nav-wrapper
+		a.brand-logo(href='#') Logo
+		ul#nav-mobile.right.hide-on-med-and-down
+			li
+				a(href='sass.html') Sass
+			li
+				a(href='badges.html') Components
+			li
+				a(href='collapsible.html') JavaScript
+.collection
+	a.collection-item(href='#!')
+		| Alan
+		span.badge 1
+	a.collection-item(href='#!')
+		| Alan
+		span.new.badge 4
+	a.collection-item(href='#!') Alan
+	a.collection-item(href='#!')
+		| Alan
+		span.badge 14
+ul#dropdown2.dropdown-content
+	li
+		a(href='#!')
+			| one
+			span.badge 1
+	li
+		a(href='#!')
+			| two
+			span.new.badge 1
+	li
+		a(href='#!') three
+a.btn.dropdown-button(href='#!', data-activates='dropdown2')
+	| Dropdown
+	i.mdi-navigation-arrow-drop-down.right
+ul.collapsible(data-collapsible='accordion')
+	li
+		.collapsible-header
+			| First
+		.collapsible-body
+			p Lorem ipsum dolor sit amet.
+	li
+		.collapsible-header
+			| Second
+		.collapsible-body
+			p Lorem ipsum dolor sit amet.
+	li
+		.collapsible-header
+			| Third
+		.collapsible-body
+			p Lorem ipsum dolor sit amet.
