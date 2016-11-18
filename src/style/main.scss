@@ -1,8 +1,70 @@
+@import "../../bower_components/materialize/sass/materialize.scss";
+
+	$side: 100px;
+
 * {
+	box-sizing: border-box;
 	font-family: "Roboto";
 	font-weight: 300;
 }
-@import "../../bower_components/materialize/sass/materialize.scss";
-@import "partials/_header.scss";
-@import "partials/_content.scss";
-@import "partials/_footer.scss";
+
+.row {
+	margin: 0 !important;
+	padding: 0 !important;
+
+}
+
+.col {
+	@extend .row;
+}
+
+.main-cont {
+	background-color: #bbdefb;
+	height: 100vh;
+	width: 100 vw;
+	@extend .row;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: auto;
+}
+
+.circle-center {
+	border-radius: 50%;
+	height: $side;
+	width: $side;
+	background-color: #e57373;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: (-$side / 2) 0 0 (-$side / 2);
+	transition: 3s;
+}
+
+.circle-left-top {
+	@extend .circle-center;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+}
+
+.circle-right-top {
+	@extend .circle-center;
+	top: 0 !important;
+	left: 100% !important;
+	margin: 0 0 0 (-$side) !important;
+}
+
+.circle-right-bot {
+	@extend .circle-center;
+	top: 100% !important;
+	left: 100% !important;
+	margin: (-$side) 0 0 (-$side) !important;
+}
+
+.circle-left-bot {
+	@extend .circle-center;
+	top: 100% !important;
+	left: 0 !important;
+	margin: (-$side) 0 0 0 !important;
+}

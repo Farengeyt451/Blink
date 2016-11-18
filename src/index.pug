@@ -1,10 +1,16 @@
 doctype html
-html
-	head
-		title EmptyProject
-		link(rel='stylesheet' type="text/css" href='css/main.css')
+html(lang="en")
+	head(lang="en")
+		meta(charset="UTF-8")
+		title Blink
+		meta(name="description" content="Blink - exercises to relieve eye fatigue")
+		meta(name="keywords" content="Eye, exercise, fatigue, health")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+		link(rel="icon" type="imge/png" href="")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
 	body
-		script(src='js/main.js')
-		include template/_header.pug
-		include template/_content.pug
-		include template/_footer.pug
+		.row
+			.col.l12.m12.s12.main-cont
+				#my-circle.circle-center
+
+		script(src="js/main.js")
