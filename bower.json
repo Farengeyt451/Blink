@@ -1,20 +1,21 @@
 {
-	"name": "EmptyProject",
-	"description": "",
-	"main": "index.js",
-	"authors": [
-		"Alexander Kislov"
-	],
-	"license": "ISC",
-	"homepage": "",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"dependencies": {
-		"materialize": "^0.97.8"
-	}
+  "name": "EmptyProject",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alexander Kislov"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.5"
+  }
 }
