@@ -9,11 +9,12 @@ html(lang="en")
 		link(rel="icon" type="imge/png" href="")
 		link(rel="stylesheet" type="text/css" href="css/main.css")
 	body
-		.row
-			.col-sm-4.colx
-				| One of three columns
-			.col-sm-4.colx
-				| One of three columns
-			.col-sm-4.colx
-				| One of three columns
+		.container-fluid
+			.row
+				.col-sm-12.main-cont
+					//- Пустой блок ("direct-anim") нужен для прямых анимаций (верх-них, лево-право, диагонали, квадрат)
+					#direct-anim
+					//- Для включения анимаций вращения - подключить блок "main-orbit" с вложенным "orbit-circle"
+					#spin-anim-main.cont-1
+						#spin-anim.main-circle-1
 		script(src="js/main.js")

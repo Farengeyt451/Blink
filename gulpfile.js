@@ -104,7 +104,9 @@ gulp.task("style:build", function () {
 		.pipe(plumber())
 		.pipe(gulpIf(isDevelopment, sourcemaps.init()))
 		.pipe(sass().on("error", sass.logError))
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			browsers: ["last 3 versions"]
+		}))
 		.pipe(gulpIf(!isDevelopment, cleancss()))
 		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
 		.pipe(gulpIf(isDevelopment, gulp.dest(path.build.css), gulp.dest(path.production.css)))
