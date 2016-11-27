@@ -4,12 +4,14 @@
 @import "../../bower_components/bootstrap/scss/_reboot.scss";
 @import "../../bower_components/bootstrap/scss/_grid.scss";
 
-$side: 100px;
+// Диаметр окружности
+$diameter: 100px;
 
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
 	background-color: #BBDEFB;
 	height: 100vh;
+	width: 100vw;
 	padding: 0;
 	// Включение аппаратного ускорения (наверное)
 	transform: translateZ(0);
@@ -20,47 +22,64 @@ $side: 100px;
 .main-circle {
 	background-color: #E57373;
 	border-radius: 50%;
-	height: $side;
-	width: $side;
+	height: $diameter;
+	width: $diameter;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	// margin: (-$side / 2) 0 0 (-$side / 2);
+	// margin: (-$diameter / 2) 0 0 (-$diameter / 2);
 	transform: translate(-50%, -50%);
 }
 
-// Блок (100% вьюпорта) для окружности, выровненной по верхнему краю вьюпорта
-.main-orbit {
+// Блок (100% вьюпорта) для окружности, выровненной по центру вьюпорта; прямые анимации
+.cont-linear {
+	background-color: rgba(255, 152, 0, 0.5);
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+
+// Блок (100% вьюпорта) для окружности, выровненной по верхнему краю вьюпорта; круговые анимации
+.cont-orbit {
 	background-color: #fff;
-	height: 100%;
-	width: $side;
+	height: 100vh;
+	width: $diameter;
 	margin: 0 auto;
-	animation: orbit 8s linear infinite;
 	// Окружность, для анимации врацения по кругу
 	.orbit-circle {
 		@extend .main-circle;
-		top: calc(0% + #{$side / 2});
+		top: calc(0% + #{$diameter / 2});
 	}
 }
 
 // Блок для запуска анимации мигания окружности
-.main-circle-blinking {
+.circle-blinking {
 	animation: blinking 1s infinite alternate ease-in-out;
 }
 
 // Блок для запуска анимации движения окружности (верх-низ)
-.main-circle-top-bot {
-	animation: top-bot 5s 2 linear;
+.circle-top-bot {
+	// animation: top-bot 5s linear 3s 5 normal none running;
+	animation-name: top-bot;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 3s;
+	animation-iteration-count: 5;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
 }
 
 // Блок для запуска анимации движения окружности (лево-право)
-.main-circle-left-right {
-	animation: left-right 5s 2 linear;
+.circle-left-right {
+	animation: left-right 5s linear 3s 5 normal none running;
 }
 
 // Блок для запуска анимации вращения окружности по кругу (спин)
-.main-circle-spin {
-	animation: orbit 4s linear infinite;
+.circle-clockwise-spin {
+	animation: clockwise-spin 5s linear 3s 5 normal none running;
 }
 
 // Анимация мигания
@@ -76,131 +95,98 @@ $side: 100px;
 // Анимация движения окружности (верх-низ)
 @keyframes top-bot {
 	0% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 	25% {
-		left: 50%;
-		top: calc(0% + #{$side / 2});
-		transform: translate3d(left, top, 0);
+		left: 0%;
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
 	}
 	30% {
-		left: 50%;
-		top: calc(0% + #{$side / 2});
-		transform: translate3d(left, top, 0);
+		left: 0%;
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
 	}
 	50% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 	75% {
-		left: 50%;
-		top: calc(100% - #{$side / 2});
-		transform: translate3d(left, top, 0);
+		left: 0%;
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
 	}
 	80% {
-		left: 50%;
-		top: calc(100% - #{$side / 2});
-		transform: translate3d(left, top, 0);
+		left: 0%;
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
 	}
 	100% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 }
-
-// Анимация движения окружности (лево-право)
-// @keyframes left-right {
-// 	0% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	5% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	20% {
-// 		left: 0;
-// 		margin-left: 0;
-// 	}
-// 	25% {
-// 		left: 0;
-// 		margin-left: 0;
-// 	}
-// 	45% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	50% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	55% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	70% {
-// 		left: 100%;
-// 		margin-left: -$side;
-// 	}
-// 	75% {
-// 		left: 100%;
-// 		margin-left: -$side;
-// 	}
-// 	95% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// 	100% {
-// 		left: 50%;
-// 		margin: (-$side / 2) 0 0 (-$side / 2);
-// 	}
-// }
 
 // Анимация движения окружности (лево-право)
 @keyframes left-right {
 	0% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 	25% {
-		left: calc(0% + #{$side / 2});
-		top: 50%;
-		transform: translate3d(left, top, 0);
+		left: calc(-50% + #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
 	}
 	30% {
-		left: calc(0% + #{$side / 2});
-		top: 50%;
-		transform: translate3d(left, top, 0);
+		left: calc(-50% + #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
 	}
 	50% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 	75% {
-		left: calc(100% - #{$side / 2});
-		top: 50%;
-		transform: translate3d(left, top, 0);
+		left: calc(50% - #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
 	}
 	80% {
-		left: calc(100% - #{$side / 2});
-		top: 50%;
-		transform: translate3d(left, top, 0);
+		left: calc(50% - #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
 	}
 	100% {
-		left: 50%;
-		top: 50%;
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 }
-
+	// 0% {
+	// 	left: 0%;
+	// 	top: 0%;
+	// 	transition: translate3d(left, top, 0);
+	// }
+	// 50% {
+	// 	left: calc(-50% + #{$diameter / 2});
+	// 	top: 0%;
+	// 	transition: translate3d(left, top, 0);
+	// }
+	// 100% {
+	// 	left: 0%;
+	// 	top: 0%;
+	// 	transition: translate3d(left, top, 0);
+	// }
+	// }
 // Анимация вращения окружности по кругу (спин)
-@keyframes orbit {
+@keyframes clockwise-spin {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -208,48 +194,3 @@ $side: 100px;
 		transform: rotate(360deg);
 	}
 }
-
-.cont-1 {
-	background-color: #AEAEAE;
-	height: 100vh;
-	width: 100vw;
-	position: absolute;
-	top: calc(50% - 50px);
-	left: calc(50% - 50px);
-	// animation: test 5s 4 linear;
-	.main-circle-1 {
-		@extend .main-circle;
-	}
-}
-
-@keyframes test {
-	0% {
-		left: 0%;
-		top: 0%;
-		transition: translate3d(left, top, 0);
-	}
-	50% {
-		left: calc(-50% + #{$side / 2});
-		top: 0%;
-		transition: translate3d(left, top, 0);
-	}
-	100% {
-		left: 0%;
-		top: 0%;
-		transition: translate3d(left, top, 0);
-	}
-}
-
-
-// .main-orbit {
-// 	background-color: #fff;
-// 	height: 100vh;
-// 	width: $side;
-// 	margin: 0 auto;
-// 	animation: orbit 8s linear infinite;
-// 	// Окружность, для анимации врацения по кругу
-// 	.orbit-circle {
-// 		@extend .main-circle;
-// 		top: calc(0% + #{$side / 2});
-// 	}
-// }
