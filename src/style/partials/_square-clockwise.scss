@@ -1,0 +1,28 @@
+// Анимация движения окружности по квадрату (по часовой стрелке)
+@keyframes square-clockwise {
+	0% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	25% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	50% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	75% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}

@@ -1,0 +1,38 @@
+// Анимация движения окружности (лево-право)
+@keyframes left-right {
+	0% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	25% {
+		left: calc(-50% + #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	30% {
+		left: calc(-50% + #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	50% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	75% {
+		left: calc(50% - #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	80% {
+		left: calc(50% - #{$diameter / 2});
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+}

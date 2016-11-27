@@ -1,0 +1,38 @@
+// Анимация движения окружности (верх-низ)
+@keyframes top-bot {
+	0% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	25% {
+		left: 0%;
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	30% {
+		left: 0%;
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	50% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	75% {
+		left: 0%;
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	80% {
+		left: 0%;
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+}
