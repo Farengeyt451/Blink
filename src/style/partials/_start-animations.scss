@@ -1,0 +1,52 @@
+// Блок для запуска анимации мигания окружности
+.circle-blinking {
+	animation: blinking 1s infinite alternate ease-in-out;
+}
+
+// Блок для запуска анимации движения окружности (верх - низ)
+.circle-top-bot {
+	animation: top-bot 5s linear 3s 5 normal none running;
+	// animation-name: top-bot;
+	// animation-duration: 5s;
+	// animation-timing-function: linear;
+	// animation-delay: 3s;
+	// animation-iteration-count: 5;
+	// animation-direction: normal;
+	// animation-fill-mode: none;
+	// animation-play-state: running;
+}
+
+// Блок для запуска анимации движения окружности (лево - право)
+.circle-left-right {
+	animation: left-right 5s linear 3s 5 normal none running;
+}
+
+// Блок для запуска анимации движения окружности по диагонали (верх право - низ лево)
+.circle-topright-botleft {
+	animation: topright-botleft 5s linear 3s 5 normal none running;
+}
+
+// Блок для запуска анимации движения окружности по диагонали (верх лево - низ право)
+.circle-topleft-botright {
+	animation: topleft-botright 5s linear 3s 5 normal none running;
+}
+
+// Блок для запуска анимации движения окружности по квадрату (по часовой стрелке)
+.circle-square-clockwise {
+	animation: square-help 3s linear 1s 1 normal forwards running, square-clockwise 10s linear 5s 2 normal none running, square-help 3s linear 26s 1 reverse forwards running;
+}
+
+// Блок для запуска анимации движения окружности по квадрату (против часовой стрелки)
+.circle-square-counterclock-wise {
+	animation: square-help 3s linear 1s 1 normal forwards running, square-clockwise 10s linear 5s 2 reverse none running, square-help 3s linear 26s 1 reverse forwards running;
+}
+
+// Блок для запуска анимации вращения окружности по кругу (по часовой стрелке)
+.circle-orbit-clockwise {
+	animation: clockwise-orbit 5s linear 5s 2 normal none running;
+}
+
+// Блок для запуска анимации вращения окружности по кругу (против часовой стрелки)
+.circle-orbit-counterclock-wise {
+	animation: clockwise-orbit 5s linear 5s 2 reverse none running;
+}

@@ -1,0 +1,23 @@
+// Анимация вращения окружности по кругу (по часовой стрелке)
+@keyframes clockwise-orbit {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// Вспомогательная анимация (выход вверх)
+@keyframes clockwise-orbit-help {
+	0% {
+		left: 50%;
+		top: 50%;
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: 50%;
+		top: calc(0% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}

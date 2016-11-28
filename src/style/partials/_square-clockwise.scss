@@ -5,7 +5,17 @@
 		top: calc(-50% + #{$diameter / 2});
 		transition: translate3d(left, top, 0);
 	}
+	5% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
 	25% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	30% {
 		left: calc(50% - #{$diameter / 2});
 		top: calc(-50% + #{$diameter / 2});
 		transition: translate3d(left, top, 0);
@@ -15,9 +25,33 @@
 		top: calc(50% - #{$diameter / 2});
 		transition: translate3d(left, top, 0);
 	}
+	55% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
 	75% {
 		left: calc(-50% + #{$diameter / 2});
 		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	80% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}
+
+// Вспомогательная анимация (выход в левый верхний угол перед началом анимации)
+@keyframes square-help {
+	0% {
+		left: 0%;
+		top: 0%;
 		transition: translate3d(left, top, 0);
 	}
 	100% {

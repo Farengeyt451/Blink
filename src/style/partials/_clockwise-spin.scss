@@ -1,9 +1,0 @@
-// Анимация вращения окружности по кругу (спин)
-@keyframes clockwise-spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
