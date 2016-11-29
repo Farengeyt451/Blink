@@ -1,0 +1,71 @@
+// Анимация движения окружности змейкой (лево - право)
+@keyframes snake-right-left {
+	0% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	25% {
+		left: calc(-25% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	30% {
+		left: calc(-25% + #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	50% {
+		left: calc(0% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	55% {
+		left: calc(0% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	75% {
+		left: calc(25% - #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	80% {
+		left: calc(25% - #{$diameter / 2});
+		top: calc(-50% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}
+
+// Вспомогательная анимация (выход в правый нижний угол перед началом анимации)
+@keyframes snake-help-bot-right {
+	0% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: calc(-50% + #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}
+
+// Вспомогательная анимация (выход в центр после завершения анимации)
+@keyframes snake-help-center {
+	0% {
+		left: calc(50% - #{$diameter / 2});
+		top: calc(50% - #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: 0%;
+		top: 0%;
+		transition: translate3d(left, top, 0);
+	}
+}
