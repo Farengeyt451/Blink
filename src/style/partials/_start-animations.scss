@@ -33,12 +33,16 @@
 
 // Блок для запуска анимации движения окружности по квадрату (по часовой стрелке)
 .circle-square-clockwise {
-	animation: square-help 3s linear 1s 1 normal forwards running, square-clockwise 10s linear 5s 2 normal none running, square-help 3s linear 26s 1 reverse forwards running;
+	animation: square-help 3s linear 1s 1 normal forwards running,
+						 square-clockwise 10s linear 5s 2 normal none running,
+						  square-help 3s linear 26s 1 reverse forwards running;
 }
 
 // Блок для запуска анимации движения окружности по квадрату (против часовой стрелки)
 .circle-square-counterclock-wise {
-	animation: square-help 3s linear 1s 1 normal forwards running, square-clockwise 10s linear 5s 2 reverse none running, square-help 3s linear 26s 1 reverse forwards running;
+	animation: square-help 3s linear 1s 1 normal forwards running,
+						 square-clockwise 10s linear 5s 2 reverse none running,
+						 square-help 3s linear 26s 1 reverse forwards running;
 }
 
 // Блок для запуска анимации вращения окружности по кругу (по часовой стрелке)
