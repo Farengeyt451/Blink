@@ -61,7 +61,7 @@ var path = {
 var devconf = {
 		server: "build",
 		port: 3000,
-		logPrefix: "InvaderZ",
+		logPrefix: "Farengeyt451",
 		// browser: ["google-chrome", "firefox"],
 		notify: true
 };
@@ -70,7 +70,7 @@ var devconf = {
 var prodconf = {
 		server: "production",
 		port: 3000,
-		logPrefix: "InvaderZ",
+		logPrefix: "Farengeyt451",
 		tunnel: true,
 		notify: true
 };
@@ -104,9 +104,7 @@ gulp.task("style:build", function () {
 		.pipe(plumber())
 		.pipe(gulpIf(isDevelopment, sourcemaps.init()))
 		.pipe(sass().on("error", sass.logError))
-		.pipe(autoprefixer({
-			browsers: ["last 3 versions"]
-		}))
+		.pipe(autoprefixer())
 		.pipe(gulpIf(!isDevelopment, cleancss()))
 		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
 		.pipe(gulpIf(isDevelopment, gulp.dest(path.build.css), gulp.dest(path.production.css)))
