@@ -5,46 +5,46 @@
 
 // Блок для запуска анимации движения окружности (верх - низ)
 .circle-top-bot {
-	animation: top-bot 6s linear 3s 5 normal none running;
+	animation: top-bot 6s linear 1s 3 normal none running;
 }
 
 // Блок для запуска анимации движения окружности (лево - право)
 .circle-left-right {
-	animation: left-right 9s linear 3s 5 normal none running;
+	animation: left-right 7s linear 1s 3 normal none running;
 }
 
 // Блок для запуска анимации движения окружности по диагонали (верх право - низ лево)
 .circle-topright-botleft {
-	animation: topright-botleft 9s linear 3s 5 normal none running;
+	animation: topright-botleft 7s linear 1s 3 normal none running;
 }
 
 // Блок для запуска анимации движения окружности по диагонали (верх лево - низ право)
 .circle-topleft-botright {
-	animation: topleft-botright 9s linear 3s 5 normal none running;
+	animation: topleft-botright 7s linear 1s 3 normal none running;
 }
 
 // Блок для запуска анимации движения окружности по квадрату (по часовой стрелке)
 .circle-square-clockwise {
 	animation: square-help 3s linear 1s 1 normal forwards running,
-						 square-clockwise 14s linear 5s 2 normal none running,
-						 square-help 3s linear 34s 1 reverse forwards running;
+						 square-clockwise 14s linear 5s 3 normal none running,
+						 square-help 3s linear 48s 1 reverse forwards running;
 }
 
 // Блок для запуска анимации движения окружности по квадрату (против часовой стрелки)
 .circle-square-counterclock-wise {
 	animation: square-help 3s linear 1s 1 normal forwards running,
-						 square-clockwise 14s linear 5s 2 reverse none running,
-						 square-help 3s linear 34s 1 reverse forwards running;
+						 square-clockwise 14s linear 5s 3 reverse none running,
+						 square-help 3s linear 48s 1 reverse forwards running;
 }
 
 // Блок для запуска анимации вращения окружности по кругу (по часовой стрелке)
 .circle-orbit-clockwise {
-	animation: clockwise-orbit 5s linear 4s 2 normal none running;
+	animation: clockwise-orbit 5s linear 4s 3 normal none running;
 }
 
 // Блок для запуска анимации вращения окружности по кругу (против часовой стрелки)
 .circle-orbit-counterclock-wise {
-	animation: clockwise-orbit 5s linear 4s 2 reverse none running;
+	animation: clockwise-orbit 5s linear 4s 3 reverse none running;
 }
 
 // Блок для запуска анимации движения окружности змейкой (лево - право)
@@ -63,63 +63,63 @@
 	}
 	.circle-square-clockwise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 10s linear 5s 2 normal none running,
-							 square-help 3s linear 26s 1 reverse forwards running;
+							 square-clockwise 10s linear 5s 3 normal none running,
+							 square-help 3s linear 36s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 10s linear 5s 2 reverse none running,
-							 square-help 3s linear 26s 1 reverse forwards running;
+							 square-clockwise 10s linear 5s 3 reverse none running,
+							 square-help 3s linear 36s 1 reverse forwards running;
 	}
 }
 
 // 1084 - 1643
 @media screen and (min-width: 1084px) and (max-width: 1643px) {
 	.circle-left-right, .circle-topright-botleft, .circle-topleft-botright {
-		animation-duration: 7s;
+		animation-duration: 6s;
 	}
 	.circle-square-clockwise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 12s linear 5s 2 normal none running,
-							 square-help 3s linear 30s 1 reverse forwards running;
+							 square-clockwise 12s linear 5s 3 normal none running,
+							 square-help 3s linear 42s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 12s linear 5s 2 reverse none running,
-							 square-help 3s linear 30s 1 reverse forwards running;
+							 square-clockwise 12s linear 5s 3 reverse none running,
+							 square-help 3s linear 42s 1 reverse forwards running;
 	}
 }
 
 // 1644 - 3008
 @media screen and (min-width: 1644px) and (max-width: 3008px) {
 	.circle-left-right, .circle-topright-botleft, .circle-topleft-botright {
-		animation-duration: 9s;
+		animation-duration: 7s;
 	}
 	.circle-square-clockwise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 14s linear 5s 2 normal none running,
-							 square-help 3s linear 34s 1 reverse forwards running;
+							 square-clockwise 14s linear 5s 3 normal none running,
+							 square-help 3s linear 48s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 14s linear 5s 2 reverse none running,
-							 square-help 3s linear 34s 1 reverse forwards running;
+							 square-clockwise 14s linear 5s 3 reverse none running,
+							 square-help 3s linear 48s 1 reverse forwards running;
 	}
 }
 
 // 3008 - 4096
 @media screen and (min-width: 3008px) and (max-width: 4096px) {
 	.circle-left-right, .circle-topright-botleft, .circle-topleft-botright {
-		animation-duration: 11s;
+		animation-duration: 10s;
 	}
 	.circle-square-clockwise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 16s linear 5s 2 normal none running,
-							 square-help 3s linear 38s 1 reverse forwards running;
+							 square-clockwise 16s linear 5s 3 normal none running,
+							 square-help 3s linear 54s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 16s linear 5s 2 reverse none running,
-							 square-help 3s linear 38s 1 reverse forwards running;
+							 square-clockwise 16s linear 5s 3 reverse none running,
+							 square-help 3s linear 54s 1 reverse forwards running;
 	}
 }
