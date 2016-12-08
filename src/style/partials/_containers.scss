@@ -1,6 +1,6 @@
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
-	background-color: #BBDEFB;
+	background-color: #FFE0B2;
 	height: 100vh;
 	width: 100vw;
 	padding: 0;
@@ -11,12 +11,22 @@
 
 // Контейнер (100% вьюпорта) для окружности
 .linear-cont {
-	background-color: #FFE0B2;
+	// background-color: #FFE0B2;
+	background-color: transparent;
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
 	top: 0%;
 	left: 0%;
+}
+
+.timer-main {
+	background-color: #50AA53;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 10%;
+	left: calc(50% - 200px / 2);
 }
 
 // Окружность; выровнена по центру вьюпорта

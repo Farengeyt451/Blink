@@ -71,7 +71,7 @@ var prodconf = {
 		server: "production",
 		port: 3000,
 		logPrefix: "Farengeyt451",
-		tunnel: true,
+		// tunnel: true,
 		notify: true
 };
 
