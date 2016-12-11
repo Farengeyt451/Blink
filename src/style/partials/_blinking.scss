@@ -1,9 +1,9 @@
 // Анимация мигания окружности
 @keyframes blinking {
 	0% {
-		opacity: 1;
+		opacity: 0;
 	}
 	100% {
-		opacity: 0;
+		opacity: 1;
 	}
 }
