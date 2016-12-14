@@ -19,3 +19,13 @@
 // @media screen and (max-width: 1200px) {
 // 	@include styling($diameter: 100px);
 // }
+
+// circle-top-bot										19s
+// circle-left-right								16s, 19s, 22s, 31s
+// circle-topright-botleft					16s, 19s, 22s, 31s
+// circle-topleft-botright					16s, 19s, 22s, 31s
+// circle-square-clockwise					39s, 45s, 51s, 57s
+// circle-square-counterclock-wise	39s, 45s, 51s, 57s
+// circle-orbit-clockwise						19s
+// circle-orbit-counterclock-wise		19s
+// circle-snake-right-left					30s

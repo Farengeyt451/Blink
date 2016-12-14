@@ -32,11 +32,11 @@
 
 // Блок для запуска анимации движения окружности по квадрату (против часовой стрелки)
 .circle-square-counterclock-wise {
-	animation: square-help 3s linear 1s 1 normal forwards running,
-						 square-clockwise 14s linear 5s 3 reverse none running,
-						 square-help 3s linear 48s 1 reverse forwards running;
+	animation: square-help-counterclock-wise 3s linear 1s 1 normal forwards running,
+						 square-counterclock-wise 14s linear 5s 3 reverse none running,
+						 square-help-counterclock-wise 3s linear 48s 1 reverse forwards running;
 }
-
+.div {}
 // Блок для запуска анимации вращения окружности по кругу (по часовой стрелке)
 .circle-orbit-clockwise {
 	animation: clockwise-orbit 5s linear 4s 3 normal none running;
@@ -67,9 +67,9 @@
 							 square-help 3s linear 36s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
-		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 10s linear 5s 3 reverse none running,
-							 square-help 3s linear 36s 1 reverse forwards running;
+		animation: square-help-counterclock-wise 3s linear 1s 1 normal forwards running,
+							 square-counterclock-wise 10s linear 5s 3 reverse none running,
+							 square-help-counterclock-wise 3s linear 36s 1 reverse forwards running;
 	}
 }
 
@@ -84,9 +84,9 @@
 							 square-help 3s linear 42s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
-		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 12s linear 5s 3 reverse none running,
-							 square-help 3s linear 42s 1 reverse forwards running;
+		animation: square-help-counterclock-wise 3s linear 1s 1 normal forwards running,
+							 square-counterclock-wise 12s linear 5s 3 reverse none running,
+							 square-help-counterclock-wise 3s linear 42s 1 reverse forwards running;
 	}
 }
 
@@ -101,9 +101,9 @@
 							 square-help 3s linear 48s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
-		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 14s linear 5s 3 reverse none running,
-							 square-help 3s linear 48s 1 reverse forwards running;
+		animation: square-help-counterclock-wise 3s linear 1s 1 normal forwards running,
+							 square-counterclock-wise 14s linear 5s 3 reverse none running,
+							 square-help-counterclock-wise 3s linear 48s 1 reverse forwards running;
 	}
 }
 
@@ -119,7 +119,7 @@
 	}
 	.circle-square-counterclock-wise {
 		animation: square-help 3s linear 1s 1 normal forwards running,
-							 square-clockwise 16s linear 5s 3 reverse none running,
+							 square-counterclock-wise 16s linear 5s 3 reverse none running,
 							 square-help 3s linear 54s 1 reverse forwards running;
 	}
 }
