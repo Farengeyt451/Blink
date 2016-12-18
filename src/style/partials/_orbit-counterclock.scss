@@ -1,5 +1,5 @@
-// Анимация вращения окружности по кругу (по часовой стрелке)
-@keyframes orbit-clockwise {
+// Анимация вращения окружности по кругу (против часовой стрелки)
+@keyframes orbit-counterclock-wise {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -9,7 +9,7 @@
 }
 
 // Вспомогательная анимация (выход вверх)
-@keyframes orbit-clockwise-help {
+@keyframes orbit-counterclock-wise-help {
 	0% {
 		left: 50%;
 		top: 50%;

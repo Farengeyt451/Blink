@@ -36,15 +36,15 @@
 						 square-counterclock-wise 14s linear 5s 3 reverse none running,
 						 square-help-counterclock-wise 3s linear 48s 1 reverse forwards running;
 }
-.div {}
+
 // Блок для запуска анимации вращения окружности по кругу (по часовой стрелке)
 .circle-orbit-clockwise {
-	animation: clockwise-orbit 5s linear 4s 3 normal none running;
+	animation: orbit-clockwise 5s linear 4s 3 normal none running;
 }
 
 // Блок для запуска анимации вращения окружности по кругу (1083против часовой стрелки)
 .circle-orbit-counterclock-wise {
-	animation: clockwise-orbit 5s linear 4s 3 reverse none running;
+	animation: orbit-counterclock-wise 5s linear 1s 3 reverse none running;
 }
 
 // Блок для запуска анимации движения окружности змейкой (лево - право)

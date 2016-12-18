@@ -48,7 +48,7 @@ var AddTopRightBotLeftAnim = function() {
 
 // Запуска анимации движения окружности по диагонали (верх лево - низ право)
 // и удаление анимации движения окружности по диагонали (верх право - низ лево)
-var AddTopLeftBotRoghtAnim = function() {
+var AddTopLeftBotRightAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-topright-botleft");
 	document.getElementById("anim-main").classList.add("circle-topleft-botright");
 };
@@ -117,44 +117,40 @@ startanim.onclick = function() {
 	setTimeout(RemoveCircleBlinking, 10000);
 	setTimeout(HideTimer, 11000);
 	setTimeout(AddTopBotAnim, 12000);
-	setTimeout(AddCircleBlinking, 32000);
-	setTimeout(RemoveCircleBlinking, 41000);
-	setTimeout(AddLeftRightAnim, 42000);
+	// setTimeout(AddCircleBlinking, 32000);
+	// setTimeout(RemoveCircleBlinking, 41000);
+	setTimeout(AddLeftRightAnim, 32000);
 	if(x > 100 && x <= 1083) {
-		setTimeout(AddCircleBlinking, 59000);
-		setTimeout(RemoveCircleBlinking, 68000);
+		setTimeout(AddCircleBlinking, 49000);
+		setTimeout(RemoveCircleBlinking, 58000);
 
-		setTimeout(AddTopRightBotLeftAnim, 69000);
+		setTimeout(AddTopRightBotLeftAnim, 59000);
 
-		setTimeout(AddCircleBlinking, 86000);
-		setTimeout(RemoveCircleBlinking, 95000);
+		// setTimeout(AddCircleBlinking, 86000);
+		// setTimeout(RemoveCircleBlinking, 95000);
 
-		setTimeout(AddTopLeftBotRoghtAnim, 96000);
+		setTimeout(AddTopLeftBotRightAnim, 76000);
 
-		setTimeout(AddCircleBlinking, 113000);
-		setTimeout(RemoveCircleBlinking, 122000);
+		setTimeout(AddCircleBlinking, 93000);
+		setTimeout(RemoveCircleBlinking, 102000);
 
-		setTimeout(AddCircleSquareClockwise, 123000);
+		setTimeout(AddCircleSquareClockwise, 103000);
 
-		setTimeout(AddCircleBlinking, 163000);
-		setTimeout(RemoveCircleBlinking, 172000);
+		setTimeout(AddCircleBlinking, 143000);
+		setTimeout(RemoveCircleBlinking, 152000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 173000);
+		setTimeout(AddCircleSquareCounterclockWise, 153000);
 
-		setTimeout(AddCircleBlinking, 213000);
-		setTimeout(RemoveCircleBlinking, 222000);
+		setTimeout(AddCircleBlinking, 193000);
+		setTimeout(RemoveCircleBlinking, 202000);
 
-		setTimeout(AddCircleOrbitClockwise, 223000);
+		setTimeout(AddCircleOrbitClockwise, 203000);
+		setTimeout(AddCircleOrbitCounterclockWise, 222000);
 
 		setTimeout(AddCircleBlinking, 243000);
 		setTimeout(RemoveCircleBlinking, 252000);
 
-		setTimeout(AddCircleOrbitCounterclockWise, 253000);
-
-		setTimeout(AddCircleBlinking, 273000);
-		setTimeout(RemoveCircleBlinking, 282000);
-
-		setTimeout(AddCircleSnakeRightLeft, 283000);
+		setTimeout(AddCircleSnakeRightLeft, 253000);
 	}
 	else if(x > 1083 && x <= 1643) {
 		// setTimeout(AddCircleBlinking, );

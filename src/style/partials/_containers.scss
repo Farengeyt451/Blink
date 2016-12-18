@@ -57,6 +57,6 @@
 .orbit-circle {
 	@extend .main-circle;
 	// Анимация для перемещения окружности вверх перед началом круговой анимации и вниз - после завершения
-	animation: clockwise-orbit-help 2s linear 1s normal forwards running,
-						 clockwise-orbit-help 2s linear 20s reverse forwards running;
+	animation: orbit-clockwise-help 2s linear 1s normal forwards running,
+						 orbit-clockwise-help 2s linear 36s reverse forwards running;
 	}
