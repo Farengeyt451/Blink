@@ -141,21 +141,21 @@ startanim.onclick = function() {
 
 		setTimeout(AddCircleSquareClockwise, 133000);
 
-		setTimeout(AddCircleBlinking, 173000);
-		setTimeout(RemoveCircleBlinking, 188000);
+		setTimeout(AddCircleBlinking, 171000);
+		setTimeout(RemoveCircleBlinking, 186000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 193000);
+		setTimeout(AddCircleSquareCounterclockWise, 191000);
 
-		setTimeout(AddCircleBlinking, 233000);
-		setTimeout(RemoveCircleBlinking, 248000);
+		setTimeout(AddCircleBlinking, 231000);
+		setTimeout(RemoveCircleBlinking, 246000);
 
-		setTimeout(AddCircleOrbitClockwise, 253000);
-		setTimeout(AddCircleOrbitCounterclockWise, 272000);
+		setTimeout(AddCircleOrbitClockwise, 251000);
+		setTimeout(AddCircleOrbitCounterclockWise, 270000);
 
-		setTimeout(AddCircleOrbitBlinking, 293000);
-		setTimeout(RemoveCircleBlinking, 308000);
+		setTimeout(AddCircleOrbitBlinking, 291000);
+		setTimeout(RemoveCircleBlinking, 306000);
 
-		setTimeout(AddCircleSnakeRightLeft, 313000);
+		setTimeout(AddCircleSnakeRightLeft, 311000);
 
 		// setTimeout(AddCircleOrbitClockwise, 22000);
 		// setTimeout(AddCircleOrbitCounterclockWise, 42000);
