@@ -51,6 +51,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: border-radius 1.5s;
 }
 
 // Окружность; выравнивается по верхнему краю вьюпорта
@@ -58,5 +59,5 @@
 	@extend .main-circle;
 	// Анимация для перемещения окружности вверх перед началом круговой анимации и вниз - после завершения
 	animation: orbit-clockwise-help 2s linear 1s normal forwards running,
-						 orbit-clockwise-help 2s linear 36s reverse forwards running;
+						 orbit-counterclock-wise-help 2s linear 36s reverse forwards running;
 	}
