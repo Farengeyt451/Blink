@@ -49,10 +49,10 @@
 
 // Блок для запуска анимации движения окружности змейкой (лево - право)
 .circle-snake-right-left {
-	animation: snake-help-center 3s linear 1s 1 reverse forwards running,
-						 snake-right-left 10s linear 5s 1 reverse forwards running,
-						 snake-right-left 10s linear 16s 1 normal forwards running,
-						 snake-help-center 3s linear 27s 1 normal forwards running;
+	animation: snake-help-center 2s linear 1s 1 reverse forwards running,
+						 snake-right-left 10s linear 4s 1 reverse forwards running,
+						 snake-right-left 10s linear 15s 1 normal forwards running,
+						 snake-help-center 2s linear 26s 1 normal forwards running;
 }
 
 // Блок для изменеия скорости анимации в зависимости от ширины дисплея
