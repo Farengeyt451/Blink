@@ -128,7 +128,7 @@ startanim.onclick = function() {
 
 	setTimeout(AddLeftRightAnim, 42000);
 
-	if(x > 100 && x <= 1083) {
+	if(x > 0 && x <= 1083) {
 		setTimeout(AddCircleBlinking, 59000);
 		setTimeout(RemoveCircleBlinking, 74000);
 
@@ -156,19 +156,92 @@ startanim.onclick = function() {
 		setTimeout(RemoveCircleBlinking, 306000);
 
 		setTimeout(AddCircleSnakeRightLeft, 311000);
-
-		// setTimeout(AddCircleOrbitClockwise, 22000);
-		// setTimeout(AddCircleOrbitCounterclockWise, 42000);
-
-		// setTimeout(AddCircleOrbitBlinking, 63000);
-		// setTimeout(RemoveCircleBlinking, 78000);
-
-		// setTimeout(AddCircleSnakeRightLeft, 83000);
 	}
 	else if(x > 1083 && x <= 1643) {
+		setTimeout(AddCircleBlinking, 62000);
+		setTimeout(RemoveCircleBlinking, 77000);
+
+		setTimeout(AddTopRightBotLeftAnim, 82000);
+
+		setTimeout(AddTopLeftBotRightAnim, 102000);
+
+		setTimeout(AddCircleBlinking, 122000);
+		setTimeout(RemoveCircleBlinking, 137000);
+
+		setTimeout(AddCircleSquareClockwise, 142000);
+
+		setTimeout(AddCircleBlinking, 186000);
+		setTimeout(RemoveCircleBlinking, 201000);
+
+		setTimeout(AddCircleSquareCounterclockWise, 206000);
+
+		setTimeout(AddCircleBlinking, 250000);
+		setTimeout(RemoveCircleBlinking, 265000);
+
+		setTimeout(AddCircleOrbitClockwise, 270000);
+		setTimeout(AddCircleOrbitCounterclockWise, 289000);
+
+		setTimeout(AddCircleOrbitBlinking, 310000);
+		setTimeout(RemoveCircleBlinking, 325000);
+
+		setTimeout(AddCircleSnakeRightLeft, 330000);
 	}
 	else if(x > 1643 && x <= 3008) {
+		setTimeout(AddCircleBlinking, 65000);
+		setTimeout(RemoveCircleBlinking, 80000);
+
+		setTimeout(AddTopRightBotLeftAnim, 85000);
+
+		setTimeout(AddTopLeftBotRightAnim, 108000);
+
+		setTimeout(AddCircleBlinking, 131000);
+		setTimeout(RemoveCircleBlinking, 146000);
+
+		setTimeout(AddCircleSquareClockwise, 151000);
+
+		setTimeout(AddCircleBlinking, 201000);
+		setTimeout(RemoveCircleBlinking, 216000);
+
+		setTimeout(AddCircleSquareCounterclockWise, 221000);
+
+		setTimeout(AddCircleBlinking, 271000);
+		setTimeout(RemoveCircleBlinking, 286000);
+
+		setTimeout(AddCircleOrbitClockwise, 291000);
+		setTimeout(AddCircleOrbitCounterclockWise, 310000);
+
+		setTimeout(AddCircleOrbitBlinking, 331000);
+		setTimeout(RemoveCircleBlinking, 346000);
+
+		setTimeout(AddCircleSnakeRightLeft, 351000);
 	}
-	else {
+	else if (x > 3008) {
+		setTimeout(AddCircleBlinking, 74000);
+		setTimeout(RemoveCircleBlinking, 89000);
+
+		setTimeout(AddTopRightBotLeftAnim, 94000);
+
+		setTimeout(AddTopLeftBotRightAnim, 126000);
+
+		setTimeout(AddCircleBlinking, 158000);
+		setTimeout(RemoveCircleBlinking, 173000);
+
+		setTimeout(AddCircleSquareClockwise, 178000);
+
+		setTimeout(AddCircleBlinking, 234000);
+		setTimeout(RemoveCircleBlinking, 249000);
+
+		setTimeout(AddCircleSquareCounterclockWise, 254000);
+
+		setTimeout(AddCircleBlinking, 310000);
+		setTimeout(RemoveCircleBlinking, 325000);
+
+		setTimeout(AddCircleOrbitClockwise, 330000);
+		setTimeout(AddCircleOrbitCounterclockWise, 349000);
+
+		setTimeout(AddCircleOrbitBlinking, 370000);
+		setTimeout(RemoveCircleBlinking, 385000);
+
+		setTimeout(AddCircleSnakeRightLeft, 390000);
 	}
 };
