@@ -57,7 +57,7 @@
 
 // Блок для изменеия скорости анимации в зависимости от ширины дисплея
 // 100 - 1083
-@media screen and (min-width: 100px) and (max-width: 1083px) {
+@media screen and (min-width: 1px) and (max-width: 1083px) {
 	.circle-left-right, .circle-topright-botleft, .circle-topleft-botright {
 		animation-duration: 5s;
 	}
@@ -118,8 +118,8 @@
 							 square-help 2s linear 53s 1 reverse forwards running;
 	}
 	.circle-square-counterclock-wise {
-		animation: square-help 2s linear 1s 1 normal forwards running,
+		animation: square-help-counterclock-wise 2s linear 1s 1 normal forwards running,
 							 square-counterclock-wise 16s linear 4s 3 reverse none running,
-							 square-help 2s linear 53s 1 reverse forwards running;
+							 square-help-counterclock-wise 2s linear 53s 1 reverse forwards running;
 	}
 }

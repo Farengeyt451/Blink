@@ -128,7 +128,7 @@ startanim.onclick = function() {
 
 	setTimeout(AddLeftRightAnim, 42000);
 
-	if(x > 0 && x <= 1083) {
+	if(x > 1 && x <= 1083) {
 		setTimeout(AddCircleBlinking, 59000);
 		setTimeout(RemoveCircleBlinking, 74000);
 
