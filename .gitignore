@@ -111,5 +111,5 @@ bower_components
 .bower-tmp
 
 ### Directories ###
-build
+### build ###
 production
