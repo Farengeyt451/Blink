@@ -1,6 +1,8 @@
 // Определение ширины дисплея
 var x = screen.width;
+var y = screen.height;
 console.log(x);
+console.log(y);
 
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
@@ -245,3 +247,16 @@ startanim.onclick = function() {
 		setTimeout(AddCircleSnakeRightLeft, 390000);
 	}
 };
+
+// if x>y then 
+// .linear-cont {
+// 	height: 100vh;
+// 	width: 100vw;
+// else if x=y
+// .linear-cont {
+// 	height: 100vh;
+// 	width: 100vw;
+// else 
+// .linear-cont {
+// 	height: 100vw;
+// 	width: 100vh;
