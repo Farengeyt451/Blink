@@ -7,6 +7,33 @@ console.log(y);
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
+
+	// Дичайший костыль для того чтобы сделать контейнер квадратным а не прямоугольным 
+	// для анимации шарика по кругу (при прямоугольном контейнере он выходит за граници вьюпорта)
+	// if (x >= y) {
+	// 	console.log("x >= y");
+	// 	var AddLinearContHeightAndWidth = function() {
+	// 		var elements = document.getElementsByClassName("linear-cont");
+	// 		for(var i = 0; i < elements.length; i++) { 
+	// 			elements[i].style.height = "100vh";
+	// 			elements[i].style.width = "100vw";
+	// 		}
+	// 	console.log("Linear Cont Done 1");
+	// 	}();
+	// }
+	// else {
+	// 	console.log("x < y");
+	// 	var AddLinearContNewHeightAndWidth = function() {
+	// 		var elements = document.getElementsByClassName("linear-cont");
+	// 		for(var i = 0; i < elements.length; i++) { 
+	// 			elements[i].style.width = "100vw";
+	// 			elements[i].style.height = "100vw";
+	// 			elements[i].style.top = "50%";
+	// 			elements[i].style.transform = "translate(0%, -50%)";
+	// 		}
+	// 	console.log("Linear Cont Done 2");
+	// 	}();
+	// }
 };
 
 // Добавление окружности
@@ -247,16 +274,3 @@ startanim.onclick = function() {
 		setTimeout(AddCircleSnakeRightLeft, 390000);
 	}
 };
-
-// if x>y then 
-// .linear-cont {
-// 	height: 100vh;
-// 	width: 100vw;
-// else if x=y
-// .linear-cont {
-// 	height: 100vh;
-// 	width: 100vw;
-// else 
-// .linear-cont {
-// 	height: 100vw;
-// 	width: 100vh;
