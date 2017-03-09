@@ -8,7 +8,7 @@
 	}
 }
 
-// Вспомогательная анимация (выход вверх)
+// Вспомогательная анимация (выход вверх) (ширина вьюпорта больше его высоты)
 @keyframes orbit-counterclock-wise-help {
 	0% {
 		left: 50%;
@@ -18,6 +18,20 @@
 	100% {
 		left: 50%;
 		top: calc(0% + #{$diameter / 2});
+		transition: translate3d(left, top, 0);
+	}
+}
+
+// Вспомогательная анимация (выход вверх) (высота вьюпорта больше его ширины)
+@keyframes orbit-counterclock-wise-help-4x3 {
+	0% {
+		left: 50%;
+		top: 50%;
+		transition: translate3d(left, top, 0);
+	}
+	100% {
+		left: 50%;
+		top: calc(0% + 100vh / 2 - 100vw / 2 + #{$diameter / 2});
 		transition: translate3d(left, top, 0);
 	}
 }

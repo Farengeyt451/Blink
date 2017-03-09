@@ -4,36 +4,35 @@ var y = screen.height;
 console.log(x);
 console.log(y);
 
+var abc = function() {
+	if (x >= y) {
+		console.log("x >= y");
+		var abcd = function() {
+			var elements = document.getElementsByClassName("orbit-circle");
+			for(var i = 0; i < elements.length; i++) { 
+				elements[i].style.animation = "orbit-clockwise-help 2s linear 1s normal forwards running, orbit-counterclock-wise-help 2s linear 36s reverse forwards running";
+			}
+			console.log("16x9 Done!");
+			}();
+	}
+	else {
+		console.log("x < y");
+		var adcde = function() {
+			var elements = document.getElementsByClassName("orbit-circle");
+			for(var i = 0; i < elements.length; i++) { 
+				elements[i].style.animation = "orbit-clockwise-help-4x3 2s linear 1s normal forwards running, orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running";
+		}
+		console.log("4x3 Done!");
+		}();
+		}
+};
+
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
 
 	// Дичайший костыль для того чтобы сделать контейнер квадратным а не прямоугольным 
 	// для анимации шарика по кругу (при прямоугольном контейнере он выходит за граници вьюпорта)
-	// if (x >= y) {
-	// 	console.log("x >= y");
-	// 	var AddLinearContHeightAndWidth = function() {
-	// 		var elements = document.getElementsByClassName("linear-cont");
-	// 		for(var i = 0; i < elements.length; i++) { 
-	// 			elements[i].style.height = "100vh";
-	// 			elements[i].style.width = "100vw";
-	// 		}
-	// 	console.log("Linear Cont Done 1");
-	// 	}();
-	// }
-	// else {
-	// 	console.log("x < y");
-	// 	var AddLinearContNewHeightAndWidth = function() {
-	// 		var elements = document.getElementsByClassName("linear-cont");
-	// 		for(var i = 0; i < elements.length; i++) { 
-	// 			elements[i].style.width = "100vw";
-	// 			elements[i].style.height = "100vw";
-	// 			elements[i].style.top = "50%";
-	// 			elements[i].style.transform = "translate(0%, -50%)";
-	// 		}
-	// 	console.log("Linear Cont Done 2");
-	// 	}();
-	// }
 };
 
 // Добавление окружности
@@ -110,6 +109,7 @@ var AddCircleOrbitClockwise = function() {
 	document.getElementById("anim-circle").classList.remove("main-circle");
 	document.getElementById("anim-circle").classList.add("orbit-circle");
 	document.getElementById("anim-main").classList.add("circle-orbit-clockwise");
+	abc();
 };
 
 // Запуска анимации движения окружности по кругу (против часовой стрелки)
