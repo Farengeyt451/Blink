@@ -27,12 +27,32 @@ var abc = function() {
 		}
 };
 
+var fgd = function() {
+	if (x >= y) {
+		console.log("x >= y");
+		var fghhh = function() {
+			var elements = document.getElementsByClassName("orbit-circle");
+			for(var i = 0; i < elements.length; i++) { 
+				elements[i].removeAttribute("style");
+			}
+			console.log("16x9 Done!");
+			}();
+	}
+	else {
+		console.log("x < y");
+		var dfffgg = function() {
+			var elements = document.getElementsByClassName("orbit-circle");
+			for(var i = 0; i < elements.length; i++) { 
+				elements[i].removeAttribute("style");
+		}
+		console.log("4x3 Done!");
+		}();
+		}
+};
+
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
-
-	// Дичайший костыль для того чтобы сделать контейнер квадратным а не прямоугольным 
-	// для анимации шарика по кругу (при прямоугольном контейнере он выходит за граници вьюпорта)
 };
 
 // Добавление окружности
@@ -52,6 +72,7 @@ var AddCircleBlinking = function() {
 
 // Запуск анимации мигания окружности после круговой анимации
 var AddCircleOrbitBlinking = function() {
+	fgd();
 	document.getElementById("anim-circle").classList.remove("orbit-circle");
 	document.getElementById("anim-circle").classList.add("main-circle");
 	document.getElementById("anim-circle").classList.add("circle-blinking");
