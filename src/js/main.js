@@ -4,51 +4,51 @@ var y = screen.height;
 console.log(x);
 console.log(y);
 
-var abc = function() {
-	if (x >= y) {
-		console.log("x >= y");
-		var abcd = function() {
-			var elements = document.getElementsByClassName("orbit-circle");
-			for(var i = 0; i < elements.length; i++) { 
-				elements[i].style.animation = "orbit-clockwise-help 2s linear 1s normal forwards running, orbit-counterclock-wise-help 2s linear 36s reverse forwards running";
-			}
-			console.log("16x9 Done!");
-			}();
-	}
-	else {
-		console.log("x < y");
-		var adcde = function() {
-			var elements = document.getElementsByClassName("orbit-circle");
-			for(var i = 0; i < elements.length; i++) { 
-				elements[i].style.animation = "orbit-clockwise-help-4x3 2s linear 1s normal forwards running, orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running";
-		}
-		console.log("4x3 Done!");
-		}();
-		}
-};
+// var abc = function() {
+// 	if (x >= y) {
+// 		console.log("x >= y");
+// 		var abcd = function() {
+// 			var elements = document.getElementsByClassName("orbit-circle");
+// 			for(var i = 0; i < elements.length; i++) { 
+// 				elements[i].style.animation = "orbit-clockwise-help 2s linear 1s normal forwards running, orbit-counterclock-wise-help 2s linear 36s reverse forwards running";
+// 			}
+// 			console.log("16x9 Done!");
+// 			}();
+// 	}
+// 	else {
+// 		console.log("x < y");
+// 		var adcde = function() {
+// 			var elements = document.getElementsByClassName("orbit-circle");
+// 			for(var i = 0; i < elements.length; i++) { 
+// 				elements[i].style.animation = "orbit-clockwise-help-4x3 2s linear 1s normal forwards running, orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running";
+// 		}
+// 		console.log("4x3 Done!");
+// 		}();
+// 		}
+// };
 
-var fgd = function() {
-	if (x >= y) {
-		console.log("x >= y");
-		var fghhh = function() {
-			var elements = document.getElementsByClassName("orbit-circle");
-			for(var i = 0; i < elements.length; i++) { 
-				elements[i].removeAttribute("style");
-			}
-			console.log("16x9 Done!");
-			}();
-	}
-	else {
-		console.log("x < y");
-		var dfffgg = function() {
-			var elements = document.getElementsByClassName("orbit-circle");
-			for(var i = 0; i < elements.length; i++) { 
-				elements[i].removeAttribute("style");
-		}
-		console.log("4x3 Done!");
-		}();
-		}
-};
+// var fgd = function() {
+// 	if (x >= y) {
+// 		console.log("x >= y");
+// 		var fghhh = function() {
+// 			var elements = document.getElementsByClassName("orbit-circle");
+// 			for(var i = 0; i < elements.length; i++) { 
+// 				elements[i].removeAttribute("style");
+// 			}
+// 			console.log("16x9 Done!");
+// 			}();
+// 	}
+// 	else {
+// 		console.log("x < y");
+// 		var dfffgg = function() {
+// 			var elements = document.getElementsByClassName("orbit-circle");
+// 			for(var i = 0; i < elements.length; i++) { 
+// 				elements[i].removeAttribute("style");
+// 		}
+// 		console.log("4x3 Done!");
+// 		}();
+// 		}
+// };
 
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
@@ -72,8 +72,8 @@ var AddCircleBlinking = function() {
 
 // Запуск анимации мигания окружности после круговой анимации
 var AddCircleOrbitBlinking = function() {
-	fgd();
 	document.getElementById("anim-circle").classList.remove("orbit-circle");
+	document.getElementById("anim-circle").classList.remove("orbit-circle-4x3");
 	document.getElementById("anim-circle").classList.add("main-circle");
 	document.getElementById("anim-circle").classList.add("circle-blinking");
 };
@@ -128,9 +128,15 @@ var AddCircleSquareCounterclockWise = function() {
 var AddCircleOrbitClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-counterclock-wise");
 	document.getElementById("anim-circle").classList.remove("main-circle");
-	document.getElementById("anim-circle").classList.add("orbit-circle");
+	if (x >= y) {
+		console.log("x >= y");
+		document.getElementById("anim-circle").classList.add("orbit-circle");
+	}
+	else {
+		console.log("x < y");
+		document.getElementById("anim-circle").classList.add("orbit-circle-4x3");
+		}
 	document.getElementById("anim-main").classList.add("circle-orbit-clockwise");
-	abc();
 };
 
 // Запуска анимации движения окружности по кругу (против часовой стрелки)
