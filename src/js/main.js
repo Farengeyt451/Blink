@@ -4,52 +4,6 @@ var y = screen.height;
 console.log(x);
 console.log(y);
 
-// var abc = function() {
-// 	if (x >= y) {
-// 		console.log("x >= y");
-// 		var abcd = function() {
-// 			var elements = document.getElementsByClassName("orbit-circle");
-// 			for(var i = 0; i < elements.length; i++) { 
-// 				elements[i].style.animation = "orbit-clockwise-help 2s linear 1s normal forwards running, orbit-counterclock-wise-help 2s linear 36s reverse forwards running";
-// 			}
-// 			console.log("16x9 Done!");
-// 			}();
-// 	}
-// 	else {
-// 		console.log("x < y");
-// 		var adcde = function() {
-// 			var elements = document.getElementsByClassName("orbit-circle");
-// 			for(var i = 0; i < elements.length; i++) { 
-// 				elements[i].style.animation = "orbit-clockwise-help-4x3 2s linear 1s normal forwards running, orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running";
-// 		}
-// 		console.log("4x3 Done!");
-// 		}();
-// 		}
-// };
-
-// var fgd = function() {
-// 	if (x >= y) {
-// 		console.log("x >= y");
-// 		var fghhh = function() {
-// 			var elements = document.getElementsByClassName("orbit-circle");
-// 			for(var i = 0; i < elements.length; i++) { 
-// 				elements[i].removeAttribute("style");
-// 			}
-// 			console.log("16x9 Done!");
-// 			}();
-// 	}
-// 	else {
-// 		console.log("x < y");
-// 		var dfffgg = function() {
-// 			var elements = document.getElementsByClassName("orbit-circle");
-// 			for(var i = 0; i < elements.length; i++) { 
-// 				elements[i].removeAttribute("style");
-// 		}
-// 		console.log("4x3 Done!");
-// 		}();
-// 		}
-// };
-
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
@@ -150,8 +104,6 @@ var AddCircleOrbitCounterclockWise = function() {
 // и удаление анимации движения окружности по кругу (против часовой стрелки)
 var AddCircleSnakeRightLeft = function() {
 	document.getElementById("anim-main").classList.remove("circle-orbit-counterclock-wise");
-	// document.getElementById("anim-circle").classList.remove("orbit-circle");
-	// document.getElementById("anim-circle").classList.add("main-circle");
 	document.getElementById("anim-main").classList.add("circle-snake-right-left");
 };
 
@@ -160,9 +112,6 @@ startanim.onclick = function() {
 	// Таймер, задержка перед началом анимации
 	var seconds = 20;
 	var StartTimer = function() {
-	// if(seconds < 9) {
-	// 	seconds = "0" + seconds;
-	// }
 	if(document.getElementById) {
 		timer.innerHTML = seconds;
 	}
