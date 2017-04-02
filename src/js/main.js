@@ -4,6 +4,12 @@ var y = screen.height;
 console.log(x);
 console.log(y);
 
+// Перезагрузка страницы при смене оринетации вьюпорта
+window.addEventListener("orientationchange", function() {
+		// alert(window.orientation);
+		location.reload();
+});
+
 // Добавление контейнера (100% вьюпорта) для окружности
 var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
