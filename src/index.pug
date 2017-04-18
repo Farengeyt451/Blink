@@ -1,23 +1,44 @@
 doctype html
-html(lang="en")
-	head(lang="en")
+html.no-js(lang="en")
+	head
 		meta(charset="UTF-8")
-		title Blink
-		meta(name="description" content="Blink - exercises to relieve eye fatigue")
-		meta(name="keywords" content="Eye, exercise, fatigue, health")
-		meta(name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, maximum-scale=1.0")
-		link(rel="icon" type="imge/png" href="")
-		link(rel="stylesheet" type="text/css" href="css/main.css")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		//- link(href="http://fonts.googleapis.com/css?family=Ubuntu:400,700", rel="stylesheet", type="text/css")
+		link(rel="stylesheet", href="css/main.css")
+		script(src="js/modernizr.js")
+		title Blink - упражнения для глаз
 	body
-		.container-fluid
-			.row
-				.col-sm-12.main-cont
-					#scroll-top
-					#timer-cont.main-timer
-						button.button#startanim Start
-						br
-						span#timer
-					.matanimation
-					#anim-main
-						#anim-circle
+		main#cd-main-content
+			section#cd-intro
+				h1 Blink - упражнения для глаз
+				header.cd-header
+					#cd-logo
+						a(href="#0")
+							img(src="img/cd-logo.svg", alt="Logo")
+					a.cd-menu-trigger(href="#main-nav")
+						| Menu
+						span
+				.cd-blurred-bg
+		.cd-shadow-layer
+		nav#main-nav
+			ul
+				li
+					a(href="#0")
+						span Рекомендации
+				li
+					a(href="template/blink.html")
+						span Начать упражнения
+				li
+					a(href="#0")
+						span Таблицы проверки зрения
+				//- li
+				//- 	a(href="#0")
+				//- 		span About
+				li
+					a(href="#0")
+						span Контакты
+			a.cd-close-menu(href="#0")
+				| Close
+				span
+		script(src="js/jquery.js")
 		script(src="js/main.js")
