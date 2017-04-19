@@ -1,6 +1,5 @@
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
-	background-color: #FFE0B2;
 	height: 100vh;
 	width: 100vw;
 	padding: 0;
@@ -11,18 +10,18 @@
 
 // Контейнер (100% вьюпорта) для окружности
 .linear-cont {
-	// background-color: #FFE0B2;
 	background-color: transparent;
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
 	top: 0%;
 	left: 0%;
+	transform: translateZ(0);
 }
 
 // Контейнер для таймера с кнопкой
 .main-timer {
-	background-color: #50AA53;
+	background-color: transparent;
 	width: 200px;
 	height: 70px;
 	position: absolute;
@@ -43,7 +42,8 @@
 
 // Окружность; выровнена по центру вьюпорта
 .main-circle {
-	background-color: #E57373;
+	// background-color: #E57373;
+	background-color: rgba(229, 229, 229, 0.9);
 	border-radius: 50%;
 	height: $diameter;
 	width: $diameter;

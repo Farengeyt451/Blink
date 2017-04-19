@@ -1,33 +1,43 @@
+// ------------------------
+// JS код для главного меню
+// ------------------------
 jQuery(document).ready(function($){
-	//open menu
-	$('.cd-menu-trigger').on('click', function(event){
+	// Открыть меню
+	$(".cd-menu-trigger").on("click", function(event){
 		event.preventDefault();
-		$('#cd-main-content').addClass('move-out');
-		$('#main-nav').addClass('is-visible');
-		$('.cd-shadow-layer').addClass('is-visible');
+		$("#cd-main-content").addClass("move-out");
+		$("#main-nav").addClass("is-visible");
+		$(".cd-shadow-layer").addClass("is-visible");
 	});
-	//close menu
-	$('.cd-close-menu').on('click', function(event){
+	// Закрыть меню
+	$(".cd-close-menu").on("click", function(event){
 		event.preventDefault();
-		$('#cd-main-content').removeClass('move-out');
-		$('#main-nav').removeClass('is-visible');
-		$('.cd-shadow-layer').removeClass('is-visible');
+		$("#cd-main-content").removeClass("move-out");
+		$("#main-nav").removeClass("is-visible");
+		$(".cd-shadow-layer").removeClass("is-visible");
 	});
 
-	//clipped image - blur effect
+	// Блюр эффект
 	set_clip_property();
-	$(window).on('resize', function(){
+	$(window).on("resize", function(){
 		set_clip_property();
 	});
 
 	function set_clip_property() {
-		var $header_height = $('.cd-header').height(),
+		var $header_height = $(".cd-header").height(),
 			$window_height = $(window).height(),
 			$header_top = $window_height - $header_height,
 			$window_width = $(window).width();
-		$('.cd-blurred-bg').css('clip', 'rect('+$header_top+'px, '+$window_width+'px, '+$window_height+'px, 0px)');
+		$(".cd-blurred-bg").css("clip", "rect("+$header_top+"px, "+$window_width+"px, "+$window_height+"px, 0px)");
 	}
 });
+// --------------------------------------------------
+
+
+
+// ------------------------
+// JS код для страницы блинк
+// ------------------------
 
 // Определение ширины дисплея
 var x = screen.width;
@@ -287,3 +297,65 @@ startanim.onclick = function() {
 		setTimeout(AddCircleSnakeRightLeft, 390000);
 	}
 };
+
+// Генерато градиента для фона
+var colors = new Array(
+	[100, 65, 165],
+	[42, 8, 69],
+	[24, 90, 157],
+	[255, 161, 127],
+	[11, 135, 147],
+	[154, 132, 120]);
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.002;
+
+function updateGradient()
+{
+	
+	if ( $===undefined ) return;
+	
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+ $('#gradient').css({
+	 background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+		background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+	
+	step += gradientSpeed;
+	if ( step >= 1 )
+	{
+		step %= 1;
+		colorIndices[0] = colorIndices[1];
+		colorIndices[2] = colorIndices[3];
+		
+		//pick two new target color indices
+		//do not pick the same as the current one
+		colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+		colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+		
+	}
+}
+
+setInterval(updateGradient,50);
