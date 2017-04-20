@@ -62,8 +62,8 @@ var AddMainCircle = function() {
 };
 
 // Скрытие контейнера таймера
-var HideTimer = function() {
-	document.getElementById("timer-cont").classList.add("main-timer-hide");
+var HideBtn = function() {
+	document.getElementById("startanim").classList.add("btn-hide");
 };
 
 // Запуск анимации мигания окружности
@@ -157,24 +157,24 @@ var AddCircleSnakeRightLeft = function() {
 // Запуск таймера
 startanim.onclick = function() {
 	// Таймер, задержка перед началом анимации
-	var seconds = 20;
-	var StartTimer = function() {
-	if(document.getElementById) {
-		timer.innerHTML = seconds;
-	}
-	if(seconds == 0) {
-		return false;
-	}
-	seconds--;
-	setTimeout(StartTimer, 1000);
-	};
-	StartTimer();
-	AddLinearCont();
-	AddMainCircle();
+	// var seconds = 20;
+	// var StartTimer = function() {
+	// if(document.getElementById) {
+	// 	timer.innerHTML = seconds;
+	// }
+	// if(seconds == 0) {
+	// 	return false;
+	// }
+	// seconds--;
+	// setTimeout(StartTimer, 1000);
+	// };
+	// StartTimer();
+	// AddLinearCont();
+	// AddMainCircle();
 	// Скрытие контейнера таймера
 	setTimeout(AddCircleBlinking, 1000);
 	setTimeout(RemoveCircleBlinking, 16000);
-	setTimeout(HideTimer, 21000);
+	// setTimeout(HideBtn, 10000);
 
 	setTimeout(AddTopBotAnim, 22000);
 
