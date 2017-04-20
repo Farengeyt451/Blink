@@ -301,9 +301,9 @@ startanim.onclick = function() {
 // Генерато градиента для фона
 var colors = new Array(
 	[100, 65, 165],
-	[42, 8, 69],
+	[141, 47, 66],
 	[24, 90, 157],
-	[255, 161, 127],
+	[182, 75, 65],
 	[11, 135, 147],
 	[154, 132, 120]);
 
@@ -320,9 +320,9 @@ var gradientSpeed = 0.002;
 
 function updateGradient()
 {
-	
+
 	if ( $===undefined ) return;
-	
+
 var c0_0 = colors[colorIndices[0]];
 var c0_1 = colors[colorIndices[1]];
 var c1_0 = colors[colorIndices[2]];
@@ -339,10 +339,10 @@ var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
 var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 var color2 = "rgb("+r2+","+g2+","+b2+")";
 
- $('#gradient').css({
-	 background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+$('#gradient').css({
+	background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
 		background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-	
+
 	step += gradientSpeed;
 	if ( step >= 1 )
 	{
@@ -354,7 +354,7 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 		//do not pick the same as the current one
 		colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
 		colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-		
+
 	}
 }
 
