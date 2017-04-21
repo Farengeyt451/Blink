@@ -34,12 +34,22 @@
 // 	visibility: visible;
 // }
 
-// Скрытие контейнера таймера с кнопкой
+// Скрытие кнопки запуска "Начать"
 .btn-hide {
 	visibility: hidden;
 	opacity: 0;
 }
 
+// Открытие кнопки "На главную"
+.btn-end-hide {
+		visibility: hidden;
+		opacity: 0;
+}
+.btn-end-show {
+	visibility: visible;
+	opacity: 1;
+}
+.div {}
 // Окружность; выровнена по центру вьюпорта
 .main-circle {
 	// background-color: #E57373;

@@ -56,14 +56,26 @@ var AddLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
 };
 
+// Удаление контейнера (100% вьюпорта) для окружности и окружности
+var RemoveContCircle = function() {
+	document.getElementById("anim-main").classList.remove("linear-cont");
+	document.getElementById("anim-circle").classList.remove("main-circle");
+};
+
 // Добавление окружности
 var AddMainCircle = function() {
 	document.getElementById("anim-circle").classList.add("main-circle");
 };
 
-// Скрытие контейнера таймера
+// Скрытие кнопки запуска "Начать"
 var HideBtn = function() {
 	document.getElementById("startanim").classList.add("btn-hide");
+};
+
+// Открытие кнопки "На главную"
+var ShowBtn = function() {
+	document.getElementById("tomain").classList.remove("btn-end-hide");
+	document.getElementById("tomain").classList.add("btn-end-show");
 };
 
 // Запуск анимации мигания окружности
@@ -130,11 +142,11 @@ var AddCircleOrbitClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-counterclock-wise");
 	document.getElementById("anim-circle").classList.remove("main-circle");
 	if (x >= y) {
-		console.log("x >= y");
+		// console.log("x >= y");
 		document.getElementById("anim-circle").classList.add("orbit-circle");
 	}
 	else {
-		console.log("x < y");
+		// console.log("x < y");
 		document.getElementById("anim-circle").classList.add("orbit-circle-4x3");
 		}
 	document.getElementById("anim-main").classList.add("circle-orbit-clockwise");
@@ -169,12 +181,13 @@ startanim.onclick = function() {
 	// setTimeout(StartTimer, 1000);
 	// };
 	// StartTimer();
-	// AddLinearCont();
-	// AddMainCircle();
+	AddLinearCont();
+	AddMainCircle();
+
 	// Скрытие контейнера таймера
 	setTimeout(AddCircleBlinking, 1000);
 	setTimeout(RemoveCircleBlinking, 16000);
-	// setTimeout(HideBtn, 10000);
+	setTimeout(HideBtn, 500);
 
 	setTimeout(AddTopBotAnim, 22000);
 
@@ -208,6 +221,9 @@ startanim.onclick = function() {
 		setTimeout(RemoveCircleBlinking, 306000);
 
 		setTimeout(AddCircleSnakeRightLeft, 311000);
+		
+		setTimeout(RemoveContCircle, 342000);
+		setTimeout(ShowBtn, 343000);
 	}
 	else if(x > 1083 && x <= 1643) {
 		setTimeout(AddCircleBlinking, 62000);
@@ -237,6 +253,9 @@ startanim.onclick = function() {
 		setTimeout(RemoveCircleBlinking, 325000);
 
 		setTimeout(AddCircleSnakeRightLeft, 330000);
+
+		setTimeout(RemoveContCircle, 361000);
+		setTimeout(ShowBtn, 362000);
 	}
 	else if(x > 1643 && x <= 3008) {
 		setTimeout(AddCircleBlinking, 65000);
@@ -266,6 +285,9 @@ startanim.onclick = function() {
 		setTimeout(RemoveCircleBlinking, 346000);
 
 		setTimeout(AddCircleSnakeRightLeft, 351000);
+
+		setTimeout(RemoveContCircle, 382000);
+		setTimeout(ShowBtn, 383000);
 	}
 	else if (x > 3008) {
 		setTimeout(AddCircleBlinking, 74000);
@@ -295,6 +317,9 @@ startanim.onclick = function() {
 		setTimeout(RemoveCircleBlinking, 385000);
 
 		setTimeout(AddCircleSnakeRightLeft, 390000);
+
+		setTimeout(RemoveContCircle, 421000);
+		setTimeout(ShowBtn, 422000);
 	}
 };
 

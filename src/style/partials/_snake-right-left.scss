@@ -48,10 +48,12 @@
 		left: calc(50% - #{$diameter / 2});
 		top: calc(50% - #{$diameter / 2});
 		transition: translate3d(left, top, 0);
+		opacity: 1;
 	}
 	100% {
 		left: 0%;
 		top: 0%;
 		transition: translate3d(left, top, 0);
+		opacity: 0;
 	}
 }
