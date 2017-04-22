@@ -1,6 +1,7 @@
 // ------------------------
 // JS код для главного меню
 // ------------------------
+
 jQuery(document).ready(function($){
 	// Открыть меню
 	$(".cd-menu-trigger").on("click", function(event){
@@ -42,49 +43,46 @@ jQuery(document).ready(function($){
 // Определение ширины дисплея
 var x = screen.width;
 var y = screen.height;
-console.log(x);
-console.log(y);
 
 // Перезагрузка страницы при смене оринетации вьюпорта
 window.addEventListener("orientationchange", function() {
-		// alert(window.orientation);
 		location.reload();
 });
 
 // Добавление контейнера (100% вьюпорта) для окружности
-var AddLinearCont = function() {
+var addLinearCont = function() {
 	document.getElementById("anim-main").classList.add("linear-cont");
 };
 
 // Удаление контейнера (100% вьюпорта) для окружности и окружности
-var RemoveContCircle = function() {
+var removeContCircle = function() {
 	document.getElementById("anim-main").classList.remove("linear-cont");
 	document.getElementById("anim-circle").classList.add("main-circle-hide");
 };
 
 // Добавление окружности
-var AddMainCircle = function() {
+var addMainCircle = function() {
 	document.getElementById("anim-circle").classList.add("main-circle");
 };
 
 // Скрытие кнопки запуска "Начать"
-var HideBtn = function() {
+var hideBtn = function() {
 	document.getElementById("startanim").classList.add("btn-hide");
 };
 
 // Открытие кнопки "На главную"
-var ShowBtn = function() {
+var showBtn = function() {
 	document.getElementById("tomain").classList.remove("btn-end-hide");
 	document.getElementById("tomain").classList.add("btn-end-show");
 };
 
 // Запуск анимации мигания окружности
-var AddCircleBlinking = function() {
+var addCircleBlinking = function() {
 	document.getElementById("anim-circle").classList.add("circle-blinking");
 };
 
 // Запуск анимации мигания окружности после круговой анимации
-var AddCircleOrbitBlinking = function() {
+var addCircleOrbitBlinking = function() {
 	document.getElementById("anim-circle").classList.remove("orbit-circle");
 	document.getElementById("anim-circle").classList.remove("orbit-circle-4x3");
 	document.getElementById("anim-circle").classList.add("main-circle");
@@ -92,61 +90,59 @@ var AddCircleOrbitBlinking = function() {
 };
 
 // Удаление анимации мигания окружности
-var RemoveCircleBlinking = function() {
+var removeCircleBlinking = function() {
 	document.getElementById("anim-circle").classList.remove("circle-blinking");
 };
 
 // Запуск анимации движения окружности (верх - низ)
-var AddTopBotAnim = function() {
+var addTopBotAnim = function() {
 	document.getElementById("anim-main").classList.add("circle-top-bot");
 };
 
-// Запуск анимации движения окружности (лево - право) 
+// Запуск анимации движения окружности (лево - право)
 // и удаление анимации движения окружности (верх - низ)
-var AddLeftRightAnim = function() {
+var addLeftRightAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-top-bot");
 	document.getElementById("anim-main").classList.add("circle-left-right");
 };
 
-// Запуска анимации движения окружности по диагонали (верх право - низ лево) 
+// Запуска анимации движения окружности по диагонали (верх право - низ лево)
 // и удаление анимации движения окружности (лево - право)
-var AddTopRightBotLeftAnim = function() {
+var addTopRightBotLeftAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-left-right");
 	document.getElementById("anim-main").classList.add("circle-topright-botleft");
 };
 
 // Запуска анимации движения окружности по диагонали (верх лево - низ право)
 // и удаление анимации движения окружности по диагонали (верх право - низ лево)
-var AddTopLeftBotRightAnim = function() {
+var addTopLeftBotRightAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-topright-botleft");
 	document.getElementById("anim-main").classList.add("circle-topleft-botright");
 };
 
 // Запуска анимации движения окружности по квадрату (по часовой стрелке)
 // и удаление анимации движения окружности по диагонали (верх лево - низ право)
-var AddCircleSquareClockwise = function() {
+var addCircleSquareClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-topleft-botright");
 	document.getElementById("anim-main").classList.add("circle-square-clockwise");
 };
 
 // Запуска анимации движения окружности по квадрату (против часовой стрелки)
 // и удаление анимации движения окружности по квадрату (по часовой стрелке)
-var AddCircleSquareCounterclockWise = function() {
+var addCircleSquareCounterclockWise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-clockwise");
 	document.getElementById("anim-main").classList.add("circle-square-counterclock-wise");
 };
 
 // Запуска анимации движения окружности по кругу (по часовой стрелке)
 // и удаление анимации движения окружности по квадрату (против часовой стрелки)
-var AddCircleOrbitClockwise = function() {
+var addCircleOrbitClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-counterclock-wise");
 	document.getElementById("anim-circle").classList.remove("main-circle");
 	if (x >= y) {
-		// console.log("x >= y");
 		document.getElementById("anim-circle").classList.add("orbit-circle");
 	}
 	else {
-		// console.log("x < y");
 		document.getElementById("anim-circle").classList.add("orbit-circle-4x3");
 		}
 	document.getElementById("anim-main").classList.add("circle-orbit-clockwise");
@@ -154,172 +150,155 @@ var AddCircleOrbitClockwise = function() {
 
 // Запуска анимации движения окружности по кругу (против часовой стрелки)
 // и удаление анимации движения окружности по кругу (по часовой стрелке)
-var AddCircleOrbitCounterclockWise = function() {
+var addCircleOrbitCounterclockWise = function() {
 	document.getElementById("anim-main").classList.remove("circle-orbit-clockwise");
 	document.getElementById("anim-main").classList.add("circle-orbit-counterclock-wise");
 };
 
 // Запуска анимации движения окружности змейкой (лево - право)
 // и удаление анимации движения окружности по кругу (против часовой стрелки)
-var AddCircleSnakeRightLeft = function() {
+var addCircleSnakeRightLeft = function() {
 	document.getElementById("anim-main").classList.remove("circle-orbit-counterclock-wise");
 	document.getElementById("anim-main").classList.add("circle-snake-right-left");
 };
 
 // Запуск таймера
 startanim.onclick = function() {
-	// Таймер, задержка перед началом анимации
-	// var seconds = 20;
-	// var StartTimer = function() {
-	// if(document.getElementById) {
-	// 	timer.innerHTML = seconds;
-	// }
-	// if(seconds == 0) {
-	// 	return false;
-	// }
-	// seconds--;
-	// setTimeout(StartTimer, 1000);
-	// };
-	// StartTimer();
-	AddLinearCont();
-	AddMainCircle();
-
+	addLinearCont();
+	addMainCircle();
 	// Скрытие контейнера таймера
-	setTimeout(AddCircleBlinking, 1000);
-	setTimeout(RemoveCircleBlinking, 16000);
-	setTimeout(HideBtn, 500);
-
-	setTimeout(AddTopBotAnim, 22000);
-
-	setTimeout(AddLeftRightAnim, 42000);
-
+	setTimeout(addCircleBlinking, 1000);
+	setTimeout(removeCircleBlinking, 16000);
+	setTimeout(hideBtn, 500);
+	setTimeout(addTopBotAnim, 22000);
+	setTimeout(addLeftRightAnim, 42000);
 	if(x > 1 && x <= 1083) {
-		setTimeout(AddCircleBlinking, 59000);
-		setTimeout(RemoveCircleBlinking, 74000);
+		setTimeout(addCircleBlinking, 59000);
+		setTimeout(removeCircleBlinking, 74000);
 
-		setTimeout(AddTopRightBotLeftAnim, 79000);
+		setTimeout(addTopRightBotLeftAnim, 79000);
 
-		setTimeout(AddTopLeftBotRightAnim, 96000);
+		setTimeout(addTopLeftBotRightAnim, 96000);
 
-		setTimeout(AddCircleBlinking, 113000);
-		setTimeout(RemoveCircleBlinking, 128000);
+		setTimeout(addCircleBlinking, 113000);
+		setTimeout(removeCircleBlinking, 128000);
 
-		setTimeout(AddCircleSquareClockwise, 133000);
+		setTimeout(addCircleSquareClockwise, 133000);
 
-		setTimeout(AddCircleBlinking, 171000);
-		setTimeout(RemoveCircleBlinking, 186000);
+		setTimeout(addCircleBlinking, 171000);
+		setTimeout(removeCircleBlinking, 186000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 191000);
+		setTimeout(addCircleSquareCounterclockWise, 191000);
 
-		setTimeout(AddCircleBlinking, 231000);
-		setTimeout(RemoveCircleBlinking, 246000);
+		setTimeout(addCircleBlinking, 231000);
+		setTimeout(removeCircleBlinking, 246000);
 
-		setTimeout(AddCircleOrbitClockwise, 251000);
-		setTimeout(AddCircleOrbitCounterclockWise, 270000);
+		setTimeout(addCircleOrbitClockwise, 251000);
+		setTimeout(addCircleOrbitCounterclockWise, 270000);
 
-		setTimeout(AddCircleOrbitBlinking, 291000);
-		setTimeout(RemoveCircleBlinking, 306000);
+		setTimeout(addCircleOrbitBlinking, 291000);
+		setTimeout(removeCircleBlinking, 306000);
 
-		setTimeout(AddCircleSnakeRightLeft, 311000);
+		setTimeout(addCircleSnakeRightLeft, 311000);
 		
-		setTimeout(RemoveContCircle, 342000);
-		setTimeout(ShowBtn, 343000);
+		setTimeout(removeContCircle, 342000);
+		setTimeout(showBtn, 343000);
 	}
 	else if(x > 1083 && x <= 1643) {
-		setTimeout(AddCircleBlinking, 62000);
-		setTimeout(RemoveCircleBlinking, 77000);
+		setTimeout(addCircleBlinking, 62000);
+		setTimeout(removeCircleBlinking, 77000);
 
-		setTimeout(AddTopRightBotLeftAnim, 82000);
+		setTimeout(addTopRightBotLeftAnim, 82000);
 
-		setTimeout(AddTopLeftBotRightAnim, 102000);
+		setTimeout(addTopLeftBotRightAnim, 102000);
 
-		setTimeout(AddCircleBlinking, 122000);
-		setTimeout(RemoveCircleBlinking, 137000);
+		setTimeout(addCircleBlinking, 122000);
+		setTimeout(removeCircleBlinking, 137000);
 
-		setTimeout(AddCircleSquareClockwise, 142000);
+		setTimeout(addCircleSquareClockwise, 142000);
 
-		setTimeout(AddCircleBlinking, 186000);
-		setTimeout(RemoveCircleBlinking, 201000);
+		setTimeout(addCircleBlinking, 186000);
+		setTimeout(removeCircleBlinking, 201000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 206000);
+		setTimeout(addCircleSquareCounterclockWise, 206000);
 
-		setTimeout(AddCircleBlinking, 250000);
-		setTimeout(RemoveCircleBlinking, 265000);
+		setTimeout(addCircleBlinking, 250000);
+		setTimeout(removeCircleBlinking, 265000);
 
-		setTimeout(AddCircleOrbitClockwise, 270000);
-		setTimeout(AddCircleOrbitCounterclockWise, 289000);
+		setTimeout(addCircleOrbitClockwise, 270000);
+		setTimeout(addCircleOrbitCounterclockWise, 289000);
 
-		setTimeout(AddCircleOrbitBlinking, 310000);
-		setTimeout(RemoveCircleBlinking, 325000);
+		setTimeout(addCircleOrbitBlinking, 310000);
+		setTimeout(removeCircleBlinking, 325000);
 
-		setTimeout(AddCircleSnakeRightLeft, 330000);
+		setTimeout(addCircleSnakeRightLeft, 330000);
 
-		setTimeout(RemoveContCircle, 361000);
-		setTimeout(ShowBtn, 362000);
+		setTimeout(removeContCircle, 361000);
+		setTimeout(showBtn, 362000);
 	}
 	else if(x > 1643 && x <= 3008) {
-		setTimeout(AddCircleBlinking, 65000);
-		setTimeout(RemoveCircleBlinking, 80000);
+		setTimeout(addCircleBlinking, 65000);
+		setTimeout(removeCircleBlinking, 80000);
 
-		setTimeout(AddTopRightBotLeftAnim, 85000);
+		setTimeout(addTopRightBotLeftAnim, 85000);
 
-		setTimeout(AddTopLeftBotRightAnim, 108000);
+		setTimeout(addTopLeftBotRightAnim, 108000);
 
-		setTimeout(AddCircleBlinking, 131000);
-		setTimeout(RemoveCircleBlinking, 146000);
+		setTimeout(addCircleBlinking, 131000);
+		setTimeout(removeCircleBlinking, 146000);
 
-		setTimeout(AddCircleSquareClockwise, 151000);
+		setTimeout(addCircleSquareClockwise, 151000);
 
-		setTimeout(AddCircleBlinking, 201000);
-		setTimeout(RemoveCircleBlinking, 216000);
+		setTimeout(addCircleBlinking, 201000);
+		setTimeout(removeCircleBlinking, 216000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 221000);
+		setTimeout(addCircleSquareCounterclockWise, 221000);
 
-		setTimeout(AddCircleBlinking, 271000);
-		setTimeout(RemoveCircleBlinking, 286000);
+		setTimeout(addCircleBlinking, 271000);
+		setTimeout(removeCircleBlinking, 286000);
 
-		setTimeout(AddCircleOrbitClockwise, 291000);
-		setTimeout(AddCircleOrbitCounterclockWise, 310000);
+		setTimeout(addCircleOrbitClockwise, 291000);
+		setTimeout(addCircleOrbitCounterclockWise, 310000);
 
-		setTimeout(AddCircleOrbitBlinking, 331000);
-		setTimeout(RemoveCircleBlinking, 346000);
+		setTimeout(addCircleOrbitBlinking, 331000);
+		setTimeout(removeCircleBlinking, 346000);
 
-		setTimeout(AddCircleSnakeRightLeft, 351000);
+		setTimeout(addCircleSnakeRightLeft, 351000);
 
-		setTimeout(RemoveContCircle, 382000);
-		setTimeout(ShowBtn, 383000);
+		setTimeout(removeContCircle, 382000);
+		setTimeout(showBtn, 383000);
 	}
 	else if (x > 3008) {
-		setTimeout(AddCircleBlinking, 74000);
-		setTimeout(RemoveCircleBlinking, 89000);
+		setTimeout(addCircleBlinking, 74000);
+		setTimeout(removeCircleBlinking, 89000);
 
-		setTimeout(AddTopRightBotLeftAnim, 94000);
+		setTimeout(addTopRightBotLeftAnim, 94000);
 
-		setTimeout(AddTopLeftBotRightAnim, 126000);
+		setTimeout(addTopLeftBotRightAnim, 126000);
 
-		setTimeout(AddCircleBlinking, 158000);
-		setTimeout(RemoveCircleBlinking, 173000);
+		setTimeout(addCircleBlinking, 158000);
+		setTimeout(removeCircleBlinking, 173000);
 
-		setTimeout(AddCircleSquareClockwise, 178000);
+		setTimeout(addCircleSquareClockwise, 178000);
 
-		setTimeout(AddCircleBlinking, 234000);
-		setTimeout(RemoveCircleBlinking, 249000);
+		setTimeout(addCircleBlinking, 234000);
+		setTimeout(removeCircleBlinking, 249000);
 
-		setTimeout(AddCircleSquareCounterclockWise, 254000);
+		setTimeout(addCircleSquareCounterclockWise, 254000);
 
-		setTimeout(AddCircleBlinking, 310000);
-		setTimeout(RemoveCircleBlinking, 325000);
+		setTimeout(addCircleBlinking, 310000);
+		setTimeout(removeCircleBlinking, 325000);
 
-		setTimeout(AddCircleOrbitClockwise, 330000);
-		setTimeout(AddCircleOrbitCounterclockWise, 349000);
+		setTimeout(addCircleOrbitClockwise, 330000);
+		setTimeout(addCircleOrbitCounterclockWise, 349000);
 
-		setTimeout(AddCircleOrbitBlinking, 370000);
-		setTimeout(RemoveCircleBlinking, 385000);
+		setTimeout(addCircleOrbitBlinking, 370000);
+		setTimeout(removeCircleBlinking, 385000);
 
-		setTimeout(AddCircleSnakeRightLeft, 390000);
+		setTimeout(addCircleSnakeRightLeft, 390000);
 
-		setTimeout(RemoveContCircle, 421000);
-		setTimeout(ShowBtn, 422000);
+		setTimeout(removeContCircle, 421000);
+		setTimeout(showBtn, 422000);
 	}
 };
 
@@ -333,14 +312,14 @@ var colors = new Array(
 	[154, 132, 120]);
 
 var step = 0;
-//color table indices for: 
-// current color left
-// next color left
-// current color right
-// next color right
+// Таблица цветов:
+// Текущий цвет слева
+// Следующий цвет слева
+// Текущий цвет справа
+// Следующий цвет справа
 var colorIndices = [0,1,2,3];
 
-//transition speed
+// Скорость перехода
 var gradientSpeed = 0.002;
 
 function updateGradient()
@@ -366,7 +345,7 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 
 $('#gradient').css({
 	background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-		background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+	background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
 
 	step += gradientSpeed;
 	if ( step >= 1 )
@@ -374,12 +353,9 @@ $('#gradient').css({
 		step %= 1;
 		colorIndices[0] = colorIndices[1];
 		colorIndices[2] = colorIndices[3];
-		
-		//pick two new target color indices
-		//do not pick the same as the current one
+
 		colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
 		colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-
 	}
 }
 

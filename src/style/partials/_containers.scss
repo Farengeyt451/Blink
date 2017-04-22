@@ -19,21 +19,6 @@
 	perspective: 1000;
 }
 
-// Контейнер для таймера с кнопкой
-// .main-timer {
-// 	background-color: transparent;
-// 	width: 10vw;
-// 	height: 70px;
-// 	position: absolute;
-// 	top: 10%;
-// 	left: calc(50% - 10vw / 2);
-// 	text-align: center;
-// 	font-size: 20px;
-// 	transition: all 3s linear;
-// 	opacity: 1;
-// 	visibility: visible;
-// }
-
 // Скрытие кнопки запуска "Начать"
 .btn-hide {
 	visibility: hidden;
@@ -62,7 +47,6 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// transition: border-radius 1.5s;
 }
 
 .main-circle-hide {
