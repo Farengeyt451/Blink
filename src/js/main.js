@@ -59,7 +59,7 @@ var AddLinearCont = function() {
 // Удаление контейнера (100% вьюпорта) для окружности и окружности
 var RemoveContCircle = function() {
 	document.getElementById("anim-main").classList.remove("linear-cont");
-	document.getElementById("anim-circle").classList.remove("main-circle");
+	document.getElementById("anim-circle").classList.add("main-circle-hide");
 };
 
 // Добавление окружности
