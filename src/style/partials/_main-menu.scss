@@ -12,12 +12,12 @@ Primary style
 }
 
 html {
-	font-size: 62.5%;
+	// font-size: 62.5%;
 }
 
 body {
 	font-size: 1.6rem;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Ubuntu", sans-serif;
 	color: #003c5d;
 	background-color: #ffffff;
 }
@@ -185,7 +185,7 @@ Stretchy Nav style - common to:
 			line-height: 50px;
 			padding: 0 calc(1em + 60px) 0 1em;
 			color: rgba(255, 255, 255, 0.7);
-			font-size: 1.4rem;
+			font-size: 1.1rem;
 			-webkit-transition: color 0.2s;
 			-moz-transition: color 0.2s;
 			transition: color 0.2s;
@@ -193,16 +193,16 @@ Stretchy Nav style - common to:
 				/* navigation item icons */
 				content: '';
 				position: absolute;
-				height: 16px;
-				width: 16px;
-				right: 22px;
+				height: 32px;
+				width: 32px;
+				right: 12px;
 				top: 50%;
 				-webkit-transform: translateY(-50%) scale(0);
 				-moz-transform: translateY(-50%) scale(0);
 				-ms-transform: translateY(-50%) scale(0);
 				-o-transform: translateY(-50%) scale(0);
 				transform: translateY(-50%) scale(0);
-				opacity: .6;
+				opacity: .8;
 				background: url(../img/cd-sprite-1.svg) no-repeat 0 0;
 			}
 			&::before {
@@ -210,7 +210,7 @@ Stretchy Nav style - common to:
 				content: '';
 				position: absolute;
 				width: 3px;
-				height: 16px;
+				height: 32px;
 				top: 50%;
 				right: 60px;
 				-webkit-transform: translateX(3px) translateY(-50%) scaleY(0);
@@ -224,19 +224,19 @@ Stretchy Nav style - common to:
 		li {
 			&:first-of-type a::after {
 				/* change custom icon using image sprites */
-				background-position: -32px 0;
+				background-position: 0px 0;
 			}
 			&:nth-of-type(2) a::after {
-				background-position: -64px 0;
+				background-position: -32px 0;
 			}
 			&:nth-of-type(3) a::after {
-				background-position: -48px 0;
+				background-position: -64px 0;
 			}
 			&:nth-of-type(4) a::after {
-				background-position: 0 0;
+				background-position: -96px 0;
 			}
 			&:nth-of-type(5) a::after {
-				background-position: -16px 0;
+				background-position: -128px 0;
 			}
 		}
 		span {
