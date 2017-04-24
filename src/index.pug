@@ -3,42 +3,31 @@ html.no-js(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
-		//- link(href="http://fonts.googleapis.com/css?family=Ubuntu:400,700", rel="stylesheet", type="text/css")
 		link(rel="stylesheet", href="css/main.css")
 		script(src="js/modernizr.js")
-		title Blink - упражнения для глаз
+		title Stretchy Navigation | CodyHouse
 	body
-		main#cd-main-content
-			section#cd-intro
-				h1 Blink - упражнения для глаз
-				header.cd-header
-					#cd-logo
+		header
+			nav.cd-stretchy-nav
+				a.cd-nav-trigger(href="#0")
+					span(aria-hidden="true")
+				ul
+					li
+						a.active(href="template/blink.html")
+							span Home
+					li
 						a(href="#0")
-							img(src="img/cd-logo.svg", alt="Logo")
-					a.cd-menu-trigger(href="#main-nav")
-						| Menu
-						span
-				.cd-blurred-bg
-		.cd-shadow-layer
-		nav#main-nav
-			ul
-				li
-					a(href="#0")
-						span Рекомендации
-				li
-					a(href="template/blink.html")
-						span Начать упражнения
-				li
-					a(href="#0")
-						span Таблицы проверки зрения
-				//- li
-				//- 	a(href="#0")
-				//- 		span About
-				li
-					a(href="#0")
-						span Контакты
-			a.cd-close-menu(href="#0")
-				| Close
-				span
+							span Portfolio
+					li
+						a(href="#0")
+							span Services
+					li
+						a(href="#0")
+							span Store
+					li
+						a(href="#0")
+							span Contact
+				span.stretchy-nav-bg(aria-hidden="true")
+		main.cd-main-content
 		script(src="js/jquery.js")
 		script(src="js/main.js")

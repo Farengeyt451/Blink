@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/modernizr.js"></script>
-    <title>Blink - упражнения для глаз</title>
+    <title>Stretchy Navigation | CodyHouse</title>
   </head>
   <body>
-    <main id="cd-main-content">
-      <section id="cd-intro">
-        <h1>Blink - упражнения для глаз</h1>
-        <header class="cd-header">
-          <div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div><a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
-        </header>
-        <div class="cd-blurred-bg"></div>
-      </section>
-    </main>
-    <div class="cd-shadow-layer"></div>
-    <nav id="main-nav">
-      <ul>
-        <li><a href="#0"><span>Рекомендации</span></a></li>
-        <li><a href="template/blink.html"><span>Начать упражнения</span></a></li>
-        <li><a href="#0"><span>Таблицы проверки зрения</span></a></li>
-        <li><a href="#0"><span>Контакты</span></a></li>
-      </ul><a class="cd-close-menu" href="#0">Close<span></span></a>
-    </nav>
+    <header>
+      <nav class="cd-stretchy-nav"><a class="cd-nav-trigger" href="#0"><span aria-hidden="true"></span></a>
+        <ul>
+          <li><a class="active" href="template/blink.html"><span>Home</span></a></li>
+          <li><a href="#0"><span>Portfolio</span></a></li>
+          <li><a href="#0"><span>Services</span></a></li>
+          <li><a href="#0"><span>Store</span></a></li>
+          <li><a href="#0"><span>Contact</span></a></li>
+        </ul><span class="stretchy-nav-bg" aria-hidden="true"></span>
+      </nav>
+    </header>
+    <main class="cd-main-content"></main>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
   </body>
