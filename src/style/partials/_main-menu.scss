@@ -293,6 +293,11 @@ img {
 			-webkit-transition: -webkit-transform 0.2s;
 			-moz-transition: -moz-transform 0.2s;
 			transition: transform 0.2s;
+			@media screen and (min-width: 1px) and (max-width: 1083px) {
+			background-color: rgba(133,176,125, .8);
+			text-align: center;
+			padding: 0 20px;
+			}
 		}
 	}
 }
