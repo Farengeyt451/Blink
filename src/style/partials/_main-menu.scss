@@ -16,11 +16,6 @@ body {
 	font-family: "Ubuntu", sans-serif;
 }
 
-a {
-	color: #9acd91;
-	text-decoration: none;
-}
-
 img {
 	max-width: 100%;
 }
@@ -28,7 +23,7 @@ img {
 .cd-stretchy-nav {
 	position: fixed;
 	z-index: 2;
-	top: 40px;
+	top: 10%;
 	right: 5%;
 	pointer-events: none;
 	.stretchy-nav-bg {
@@ -40,7 +35,6 @@ img {
 		width: 60px;
 		height: 60px;
 		border-radius: 30px;
-		// background: #9acd91;
 		background: #85B07D;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 		-webkit-transition: height 0.2s, box-shadow 0.2s;
@@ -166,6 +160,7 @@ img {
 		text-align: right;
 		 list-style-type: none;
 		a {
+			text-decoration: none;
 			position: relative;
 			display: block;
 			height: 50px;
@@ -300,7 +295,7 @@ img {
 		}
 	}
 }
-.div {}
+
 .no-touch .cd-stretchy-nav.nav-is-visible ul a:hover {
 	// color: #000000;
 	text-decoration: none;
@@ -555,7 +550,6 @@ img {
 	min-height: 100vh;
 	width: 100vw;
 	padding: 100px 0;
-	// background-color: #003c5d;
 	background-image: url(../img/eye.svg);
 	background-position: center center;
 	background-size: cover;
@@ -649,4 +643,22 @@ img {
 		-o-transform: translateX(0);
 		transform: translateX(0);
 	}
+}
+
+// Для страницы блинк
+.cd-stretchy-nav-blink {
+	ul {
+		a {
+			color: rgba(255, 255, 255, 0.8);
+		}
+		a.active {
+			color: rgba(255, 255, 255, 1) !important;
+		}
+	}
+}
+
+.cd-stretchy-nav-hide {
+	transition: opacity 0.5s linear;
+	visibility: hidden;
+	opacity: 0;
 }

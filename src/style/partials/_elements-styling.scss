@@ -7,11 +7,11 @@
 	display: inline-block;
 	letter-spacing: 8px;
 	outline: none;
-	transition: all 0.4s ease;
+	transition: all 0.5s linear;
 	position: absolute;
-	top: 10%;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -10%);
+	transform: translate(-50%, -50%);
 	border: 2px solid #FFFFFF;
 	color: #fff;
 	&:hover {
@@ -38,4 +38,21 @@
 		padding: 15px 30px;
 		letter-spacing: 6px;
 	}
+}
+
+// Скрытие кнопки запуска "Начать"
+.btn-hide {
+	visibility: hidden;
+	opacity: 0;
+	top: -50%;
+}
+
+// Открытие кнопки "На главную"
+.btn-end-hide {
+		visibility: hidden;
+		opacity: 0;
+}
+.btn-end-show {
+	visibility: visible;
+	opacity: 1;
 }

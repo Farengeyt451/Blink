@@ -1,14 +1,34 @@
 doctype html
-html(lang="en")
-	head(lang="en")
+html.no-js(lang="en")
+	head
 		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="../css/main.css")
+		script(src="../js/modernizr.js")
 		title Blink
-		meta(name="description" content="Blink - exercises to relieve eye fatigue")
-		meta(name="keywords" content="Eye, exercise, fatigue, health")
-		meta(name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, maximum-scale=1.0")
-		link(rel="icon" type="imge/png" href="")
-		link(rel="stylesheet" type="text/css" href="../css/main.css")
 	body
+		header
+			nav.cd-stretchy-nav.cd-stretchy-nav-blink#main-nav
+				a.cd-nav-trigger(href="#0")
+					span(aria-hidden="true")
+				ul
+					li
+						a(href="../index.html")
+							span Главная
+					li
+						a(href="#0")
+							span Рекомендации
+					li
+						a.active(href="#0")
+							span Начать упражнения
+					li
+						a(href="#0")
+							span Проверочные таблицы
+					li
+						a(href="#0")
+							span Контакты
+				span.stretchy-nav-bg(aria-hidden="true")
+		main
 		.container-fluid
 			.row
 				.col-sm-12.main-cont#gradient

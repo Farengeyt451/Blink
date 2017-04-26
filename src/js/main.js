@@ -52,15 +52,17 @@ var addMainCircle = function() {
 	document.getElementById("anim-circle").classList.add("main-circle");
 };
 
-// Скрытие кнопки запуска "Начать"
+// Скрытие кнопки запуска "Начать" и навигации
 var hideBtn = function() {
 	document.getElementById("startanim").classList.add("btn-hide");
+	document.getElementById("main-nav").classList.add("cd-stretchy-nav-hide");
 };
 
-// Открытие кнопки "На главную"
+// Открытие кнопки "На главную" и навигации
 var showBtn = function() {
 	document.getElementById("tomain").classList.remove("btn-end-hide");
 	document.getElementById("tomain").classList.add("btn-end-show");
+	document.getElementById("main-nav").classList.remove("cd-stretchy-nav-hide");
 };
 
 // Запуск анимации мигания окружности
@@ -154,8 +156,8 @@ var addCircleSnakeRightLeft = function() {
 var elAnim = document.getElementById("startanim");
 if(elAnim){
 	startanim.onclick = function() {
-		addLinearCont();
-		addMainCircle();
+		setTimeout(addLinearCont, 500);
+		setTimeout(addMainCircle, 500);
 		// Скрытие контейнера таймера
 		setTimeout(addCircleBlinking, 1000);
 		setTimeout(removeCircleBlinking, 16000);

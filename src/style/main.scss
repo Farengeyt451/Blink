@@ -1,9 +1,8 @@
 @import "../../bower_components/bootstrap/scss/_variables.scss";
 @import "../../bower_components/bootstrap/scss/_mixins.scss";
 @import "../../bower_components/bootstrap/scss/_normalize.scss";
-@import "../../bower_components/bootstrap/scss/_reboot.scss";
+// @import "../../bower_components/bootstrap/scss/_reboot.scss";
 @import "../../bower_components/bootstrap/scss/_grid.scss";
-@import "partials/_main-menu.scss";
 @import "partials/_my-variables.scss";
 @import "partials/_containers.scss";
 @import "partials/_start-animations.scss";
@@ -17,4 +16,5 @@
 @import "partials/_orbit-clockwise.scss";
 @import "partials/_orbit-counterclock.scss";
 @import "partials/_snake-right-left.scss";
-@import "partials/_elements-styling.scss"
+@import "partials/_elements-styling.scss";
+@import "partials/_main-menu.scss"
