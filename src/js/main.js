@@ -2,27 +2,6 @@
 // JS код для главного меню
 // ------------------------
 
-// jQuery(document).ready(function(){
-// 	if( $(".cd-stretchy-nav").length > 0 ) {
-// 		var stretchyNavs = $(".cd-stretchy-nav");
-		
-// 		stretchyNavs.each(function(){
-// 			var stretchyNav = $(this),
-// 				stretchyNavTrigger = stretchyNav.find(".cd-nav-trigger");
-			
-// 			stretchyNavTrigger.on("click", function(event){
-// 				event.preventDefault();
-// 				stretchyNav.toggleClass("nav-is-visible");
-// 			});
-// 		});
-
-// 		$(document).on("click", function(event){
-// 			( !$(event.target).is(".cd-nav-trigger") && !$(event.target).is(".cd-nav-trigger span") ) && stretchyNavs.removeClass("nav-is-visible");
-// 		});
-// 	}
-// });
-// // --------------------------------------------------
-
 function toggleClass(element, className){
 		if (!element || !className){
 				return;
@@ -64,8 +43,8 @@ var addLinearCont = function() {
 
 // Удаление контейнера (100% вьюпорта) для окружности и окружности
 var removeContCircle = function() {
-	document.getElementById("anim-main").classList.remove("linear-cont");
 	document.getElementById("anim-circle").classList.add("main-circle-hide");
+	document.getElementById("anim-main").classList.remove("linear-cont");
 };
 
 // Добавление окружности
@@ -114,35 +93,35 @@ var addLeftRightAnim = function() {
 	document.getElementById("anim-main").classList.add("circle-left-right");
 };
 
-// Запуска анимации движения окружности по диагонали (верх право - низ лево)
+// Запуск анимации движения окружности по диагонали (верх право - низ лево)
 // и удаление анимации движения окружности (лево - право)
 var addTopRightBotLeftAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-left-right");
 	document.getElementById("anim-main").classList.add("circle-topright-botleft");
 };
 
-// Запуска анимации движения окружности по диагонали (верх лево - низ право)
+// Запуск анимации движения окружности по диагонали (верх лево - низ право)
 // и удаление анимации движения окружности по диагонали (верх право - низ лево)
 var addTopLeftBotRightAnim = function() {
 	document.getElementById("anim-main").classList.remove("circle-topright-botleft");
 	document.getElementById("anim-main").classList.add("circle-topleft-botright");
 };
 
-// Запуска анимации движения окружности по квадрату (по часовой стрелке)
+// Запуск анимации движения окружности по квадрату (по часовой стрелке)
 // и удаление анимации движения окружности по диагонали (верх лево - низ право)
 var addCircleSquareClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-topleft-botright");
 	document.getElementById("anim-main").classList.add("circle-square-clockwise");
 };
 
-// Запуска анимации движения окружности по квадрату (против часовой стрелки)
+// Запуск анимации движения окружности по квадрату (против часовой стрелки)
 // и удаление анимации движения окружности по квадрату (по часовой стрелке)
 var addCircleSquareCounterclockWise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-clockwise");
 	document.getElementById("anim-main").classList.add("circle-square-counterclock-wise");
 };
 
-// Запуска анимации движения окружности по кругу (по часовой стрелке)
+// Запуск анимации движения окружности по кругу (по часовой стрелке)
 // и удаление анимации движения окружности по квадрату (против часовой стрелки)
 var addCircleOrbitClockwise = function() {
 	document.getElementById("anim-main").classList.remove("circle-square-counterclock-wise");
@@ -156,22 +135,22 @@ var addCircleOrbitClockwise = function() {
 	document.getElementById("anim-main").classList.add("circle-orbit-clockwise");
 };
 
-// Запуска анимации движения окружности по кругу (против часовой стрелки)
+// Запуск анимации движения окружности по кругу (против часовой стрелки)
 // и удаление анимации движения окружности по кругу (по часовой стрелке)
 var addCircleOrbitCounterclockWise = function() {
 	document.getElementById("anim-main").classList.remove("circle-orbit-clockwise");
 	document.getElementById("anim-main").classList.add("circle-orbit-counterclock-wise");
 };
 
-// Запуска анимации движения окружности змейкой (лево - право)
+// Запуск анимации движения окружности змейкой (лево - право)
 // и удаление анимации движения окружности по кругу (против часовой стрелки)
 var addCircleSnakeRightLeft = function() {
 	document.getElementById("anim-main").classList.remove("circle-orbit-counterclock-wise");
 	document.getElementById("anim-main").classList.add("circle-snake-right-left");
 };
 
-// Запуск таймера
-
+// Запуск упражнений
+// Проверка на существование элемента кнопки
 var elAnim = document.getElementById("startanim");
 if(elAnim){
 	startanim.onclick = function() {
@@ -313,77 +292,22 @@ if(elAnim){
 		}
 	};
 }
-/*// Генератор градиента для фона
-var colors = new Array(
-	[11,72,107],
-	[103,178,111],
-	[24, 90, 157],
-	[68,160,141],
-	[11, 135, 147],
-	[69,104,220]);
 
-var step = 0;
-// Таблица цветов:
-// Текущий цвет слева
-// Следующий цвет слева
-// Текущий цвет справа
-// Следующий цвет справа
-var colorIndices = [0,1,2,3];
-
-// Скорость перехода
-var gradientSpeed = 0.002;
-
-function updateGradient()	{
-
-	if ( $===undefined ) return;
-
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
-
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgb("+r2+","+g2+","+b2+")";
-
-$("#gradient").css({
-	background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-	background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-
-	step += gradientSpeed;
-	if ( step >= 1 )
-	{
-		step %= 1;
-		colorIndices[0] = colorIndices[1];
-		colorIndices[2] = colorIndices[3];
-
-		colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-		colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-	}
-}
-
-setInterval(updateGradient,50);*/
+// Генератор градиентов
 var elGradient = document.getElementById("gradient");
 if(elGradient) {
 	// target to give background to
 	var $div = document.getElementById("gradient");
-	// rgb vals of the gradients
+	// Rgb vals of the gradients
 	var gradients = [
-		{ start: [128,179,171], stop: [30,41,58] },
-		{ start: [255,207,160], stop: [234,92,68] },
-		{ start: [212,121,121], stop: [130,105,151] }
+		{ start: [11,72,107], stop: [103,178,111] },
+		{ start: [24, 90, 157], stop: [68,160,141] },
+		{ start: [11, 135, 147], stop: [69,104,220] }
 	];
-	// how long for each transition
-	var transition_time = 4;
+	// How long for each transition
+	var transition_time = 16;
 
-	// internal type vars
+	// Internal type vars
 	var currentIndex = 0; // where we are in the gradients array
 	var nextIndex = 1; // what index of the gradients array is next
 	var steps_count = 0; // steps counter
@@ -391,26 +315,26 @@ if(elGradient) {
 	var rgb_steps = {
 		start: [0,0,0],
 		stop: [0,0,0]
-	}; // how much to alter each rgb value
+	}; // How much to alter each rgb value
 	var rgb_values = {
 		start: [0,0,0],
 		stop: [0,0,0]
-	}; // the current rgb values, gets altered by rgb steps on each interval
+	}; // The current rgb values, gets altered by rgb steps on each interval
 	var prefixes = ["-webkit-","-moz-","-o-","-ms-",""]; // for looping through adding styles
 	var div_style = $div.style; // short cut to actually adding styles
 	var color1, color2;
 
-	// sets next current and next index of gradients array
+	// Sets next current and next index of gradients array
 	function set_next(num) {
 		return (num + 1 < gradients.length) ? num + 1 : 0;
 	}
 
-	// work out how big each rgb step is
+	// Work out how big each rgb step is
 	function calc_step_size(a,b) {
 		return (a - b) / steps_total;
 	}
 
-	// populate the rgb_values and rgb_steps objects
+	// Populate the rgb_values and rgb_steps objects
 	function calc_steps() {
 		for (var key in rgb_values) {
 			if (rgb_values.hasOwnProperty(key)) {
@@ -422,7 +346,7 @@ if(elGradient) {
 		}
 	}
 
-	// update current rgb vals, update DOM element with new CSS background
+	// Update current rgb vals, update DOM element with new CSS background
 	function updateGradient(){
 		// update the current rgb vals
 		for (var key in rgb_values) {
@@ -433,45 +357,45 @@ if(elGradient) {
 			}
 		}
 
-		// generate CSS rgb values
+		// Generate CSS rgb values
 		var t_color1 = "rgb("+(rgb_values.start[0] | 0)+","+(rgb_values.start[1] | 0)+","+(rgb_values.start[2] | 0)+")";
 		var t_color2 = "rgb("+(rgb_values.stop[0] | 0)+","+(rgb_values.stop[1] | 0)+","+(rgb_values.stop[2] | 0)+")";
 
-		// has anything changed on this interation
+		// Has anything changed on this interation
 		if (t_color1 != color1 || t_color2 != color2) {
 
-			// update cols strings
+			// Update cols strings
 			color1 = t_color1;
 			color2 = t_color2;
 
-			// update DOM element style attribute
+			// Update DOM element style attribute
 			div_style.backgroundImage = "-webkit-gradient(linear, left bottom, right top, from("+color1+"), to("+color2+"))";
 			for (var i = 0; i < 4; i++) {
 				div_style.backgroundImage = prefixes[i]+"linear-gradient(45deg, "+color1+", "+color2+")";
 			}
 		}
 
-		// we did another step
+		// We did another step
 		steps_count++;
-		// did we do too many steps?
+		// Did we do too many steps?
 		if (steps_count > steps_total) {
-			// reset steps count
+			// Reset steps count
 			steps_count = 0;
-			// set new indexs
+			// Set new indexs
 			currentIndex = set_next(currentIndex);
 			nextIndex = set_next(nextIndex);
-			// calc steps
+			// Calc steps
 			calc_steps();
 		}
 
 		if (div_style.backgroundImage.indexOf("gradient") != -1) {
-			window.requestAnimationFrame(updateGradient)
+			window.requestAnimationFrame(updateGradient);
 		}
 	}
 
-	// initial step calc
+	// Initial step calc
 	calc_steps();
 
-	// go go go!
+	// Start
 	window.requestAnimationFrame(updateGradient);
 };

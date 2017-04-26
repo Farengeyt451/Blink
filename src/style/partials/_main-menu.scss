@@ -14,8 +14,6 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: "Ubuntu", sans-serif;
-	// color: #003c5d;
-	// background-color: #ffffff;
 }
 
 a {
@@ -293,15 +291,16 @@ img {
 			-webkit-transition: -webkit-transform 0.2s;
 			-moz-transition: -moz-transform 0.2s;
 			transition: transform 0.2s;
-			@media screen and (min-width: 1px) and (max-width: 1083px) {
+			@media screen and (max-height: 800px) and (max-width: 1083px) {
 			background-color: rgba(133,176,125, .8);
 			text-align: center;
-			padding: 0 20px;
+			padding: 0 15px;
+			margin: 5px 0;
 			}
 		}
 	}
 }
-
+.div {}
 .no-touch .cd-stretchy-nav.nav-is-visible ul a:hover {
 	// color: #000000;
 	text-decoration: none;
