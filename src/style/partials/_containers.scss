@@ -27,9 +27,9 @@
 
 // Окружность; выровнена по центру вьюпорта
 .main-circle {
-	transform: transale3d(0,0,0);
+	// transform: transale3d(0,0,0);
 	// background-color: #E57373;
-	background-color: rgba(229, 229, 229, 0.9);
+	background-color: rgba(229, 229, 229, 1);
 	border-radius: 50%;
 	height: $diameter;
 	width: $diameter;
