@@ -1,20 +1,30 @@
+// Импорт бутстрап сетки
 @import "../../bower_components/bootstrap/scss/_variables.scss";
 @import "../../bower_components/bootstrap/scss/_mixins.scss";
 @import "../../bower_components/bootstrap/scss/_normalize.scss";
 @import "../../bower_components/bootstrap/scss/_reboot.scss";
 @import "../../bower_components/bootstrap/scss/_grid.scss";
+
+// Импорт моих переменных
 @import "partials/_my-variables.scss";
-@import "partials/_containers.scss";
-@import "partials/_start-animations.scss";
-@import "partials/_blinking.scss";
-@import "partials/_top-bot.scss";
-@import "partials/_left-right.scss";
-@import "partials/_topright-botleft.scss";
-@import "partials/_topleft-botright.scss";
-@import "partials/_square-clockwise.scss";
-@import "partials/_square-counterclock-wise.scss";
-@import "partials/_orbit-clockwise.scss";
-@import "partials/_orbit-counterclock.scss";
-@import "partials/_snake-right-left.scss";
-@import "partials/_elements-styling.scss";
-@import "partials/_main-menu.scss"
+
+// Импорт стилей для страницы "Блинк"
+@import "partials/blink/_containers.scss";
+@import "partials/blink/_start-animations.scss";
+@import "partials/blink/_blinking.scss";
+@import "partials/blink/_top-bot.scss";
+@import "partials/blink/_left-right.scss";
+@import "partials/blink/_topright-botleft.scss";
+@import "partials/blink/_topleft-botright.scss";
+@import "partials/blink/_square-clockwise.scss";
+@import "partials/blink/_square-counterclock-wise.scss";
+@import "partials/blink/_orbit-clockwise.scss";
+@import "partials/blink/_orbit-counterclock.scss";
+@import "partials/blink/_snake-right-left.scss";
+@import "partials/blink/_elements-styling.scss";
+
+// Импорт стилей для главной страницы
+@import "partials/main-menu/_main-menu.scss";
+
+// Импорт стилей для страницы "Рекомендации"
+@import "partials/recommendations/_recommendations.scss"
