@@ -7,20 +7,13 @@
 	}
 }
 
-html {
-	// font-size: 62.5%;
-}
-
-body {
-	font-size: 1.6rem;
-	font-family: "Ubuntu", sans-serif;
-}
-
 img {
 	max-width: 100%;
 }
 
 .cd-stretchy-nav {
+	font-size: 24px;
+	font-family: "Ubuntu", sans-serif;
 	position: fixed;
 	z-index: 2;
 	top: 10%;
@@ -167,15 +160,15 @@ img {
 			line-height: 50px;
 			padding: 0 calc(1em + 60px) 0 1em;
 			color: rgba(0, 0, 0, 0.8);
-			font-size: 1.1rem;
+			font-size: 18px;
 			-webkit-transition: color 0.2s;
 			-moz-transition: color 0.2s;
 			transition: color 0.2s;
 			@media screen and (min-width: 301px) and (max-width: 1083px) {
-				font-size: 1rem;
+				font-size: 16px;
 			}
 			@media screen and (min-width: 1px) and (max-width: 300px) {
-				font-size: 0.8rem;
+				font-size: 14px;
 			}
 			&::after {
 				/* navigation item icons */
@@ -287,7 +280,7 @@ img {
 			-moz-transition: -moz-transform 0.2s;
 			transition: transform 0.2s;
 			@media screen and (max-height: 800px) and (max-width: 1083px) {
-			background-color: rgba(133,176,125, .8);
+			background-color: rgba(133,176,125, 1);
 			text-align: center;
 			padding: 0 15px;
 			margin: 5px 0;
