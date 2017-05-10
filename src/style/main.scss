@@ -5,8 +5,9 @@
 @import "../../bower_components/bootstrap/scss/_reboot.scss";
 @import "../../bower_components/bootstrap/scss/_grid.scss";
 
-// Импорт моих переменных
+// Импорт моих переменных и шрифтов
 @import "partials/_my-variables.scss";
+@import "partials/_fonts.scss";
 
 // Импорт стилей для страницы "Блинк"
 @import "partials/blink/_containers.scss";
