@@ -7,47 +7,59 @@
 		padding-bottom: 5%;
 	}
 }
-.a1 {
+.table-1 {
+text-align: justify;
 position: relative;
-background-color: #FFD87B;
+background-color: #EFCA73;
 margin: 50px 0;
 font-size: 20px;
 line-height: 33px;
 	img {
 		display: none;
 		position: absolute;
-		top: 0%;
+		top: -25%;
 		left: 0%;
 		z-index: 1;
-		height: 600px;
+		height: 500px;
 		border: 2px solid #666666;
 	}
 	button {
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 60px;
 	position: absolute;
 	top: 100%;
 	left: 0;
 	width: 100%;
 	background-color: transparent;
 	cursor: pointer;
-	padding: 10px 100px;
+	height: 60px;
+	width: 100%;
 	outline: none;
 	transition: all 0.5s linear;
 	border: 2px solid transparent;
 	color: #666666;
+	a {
+		transition: all 0.5s linear;
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		width: 100%;
+		height: 100%;
+		}
 		&:hover {
-			color: #FFFFFF;
-			background: #FFD87B;
-			// border: 2px solid #666666;
+			border-top: 2px dotted #666666;
+			color: #424242;
+			background: #EFCA73;
 		}
 		&:active {
-			color: #FFFFFF;
-			background: #FFD87B;
-			// border: 2px solid #666666;
+			color: #424242;
+			background: #EFCA73;
 		}
 		&:focus {
-			color: #FFFFFF;
-			background: #FFD87B;
-			// border: 2px solid #666666;
+			color: #424242;
+			background: #EFCA73;
 		}
 	}
 	h4 {
@@ -64,70 +76,48 @@ line-height: 33px;
 	}
 }
 
-.a2 {
-@extend .a1;
+.table-2 {
+@extend .table-1;
 background-color: #74C1FF;
 	button {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	background-color: transparent;
-	cursor: pointer;
-	padding: 10px 100px;
-	outline: none;
-	transition: all 0.5s linear;
-	border: 2px solid transparent;
-	color: #666666;
 		&:hover {
-			color: #FFFFFF;
 			background: #74C1FF;
-			// border: 2px solid #666666;
 		}
 		&:active {
-			color: #FFFFFF;
 			background: #74C1FF;
-			// border: 2px solid #666666;
 		}
 		&:focus {
-			color: #FFFFFF;
 			background: #74C1FF;
-			// border: 2px solid #666666;
 		}
 	}
 }
 
-.a3 {
-@extend .a1;
+.table-3 {
+@extend .table-1;
 background-color: #9176FF;
-margin-bottom: 10vh;
+margin-bottom: 100px;
 	button {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	background-color: transparent;
-	cursor: pointer;
-	padding: 10px 100px;
-	outline: none;
-	transition: all 0.5s linear;
-	border: 2px solid transparent;
-	color: #666666;
 		&:hover {
-			color: #FFFFFF;
 			background: #9176FF;
-			// border: 2px solid #666666;
 		}
 		&:active {
-			color: #FFFFFF;
 			background: #9176FF;
-			// border: 2px solid #666666;
 		}
 		&:focus {
-			color: #FFFFFF;
 			background: #9176FF;
-			// border: 2px solid #666666;
 		}
 	}
 }
 
+@media screen and (min-width: 1px) and (max-width: 1083px) {
+.table-1, .table-2, .table-3 {
+	font-size: 16px;
+	line-height: 29px;
+	img {
+		height: 400px;
+		}
+	button {
+		font-size: 14px;
+		}
+	}
+}
