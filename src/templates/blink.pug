@@ -1,0 +1,39 @@
+doctype html
+html.no-js(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="robots", content="all")
+		link(rel="stylesheet", href="../css/main.css")
+		title Blink - упражнения для глаз
+	body
+		header
+			nav.cd-stretchy-nav.cd-stretchy-nav-blink#main-nav
+				a.cd-nav-trigger(href="#0")
+					span(aria-hidden="true")
+				ul
+					li
+						a(href="../index.html")
+							span Главная
+					li
+						a(href="recommendations.html")
+							span Рекомендации
+					li
+						a.active(href="#0")
+							span Начать упражнения
+					li
+						a(href="tables.html")
+							span Проверочные таблицы
+					li
+						a(href="#0")
+							span Контакты
+				span.stretchy-nav-bg(aria-hidden="true")
+		main
+		.container-fluid
+			.row
+				.col-sm-12.main-cont#gradient
+					button.btn#startanim Начать
+					button.btn-end.btn-end-hide#tomain(onclick="location.href='../index.html'") На главную
+					#anim-main
+						#anim-circle
+		script(src="../js/main.js")
