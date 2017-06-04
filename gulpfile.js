@@ -41,8 +41,7 @@ var path = {
 		js: "src/js/*.js",
 		style: "src/style/main.scss",
 		img: "src/img/**/*.*",
-		fonts: "bower_components/materialize/fonts/**/*.*"
-		// fonts: "src/fonts/**/*.*"
+		fonts: "src/fonts/**/*.*"
 	},
 	watch: {					// Указываем за изменением каких файлов наблюдать
 		html: "src/**/*.pug",

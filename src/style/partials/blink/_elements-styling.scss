@@ -1,5 +1,6 @@
 // Кнопка "Начать"
 .btn {
+	text-transform: uppercase;
 	font-size: 20px;
 	text-align: center;
 	background-color: transparent;
@@ -34,7 +35,7 @@
 	@extend .btn;
 }
 
-@media screen and (min-width: 1px) and (max-width: 1083px) {
+@media screen and (min-width: 1px) and (max-width: 1400px) {
 	.btn, .btn-end {
 		font-size: 16px;
 		padding: 15px 30px;

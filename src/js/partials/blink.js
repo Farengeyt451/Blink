@@ -7,9 +7,9 @@ var x = screen.width;
 var y = screen.height;
 
 // Перезагрузка страницы при смене оринетации вьюпорта
-// window.addEventListener("orientationchange", function() {
-// 		location.reload();
-// });
+window.addEventListener("orientationchange", function() {
+		location.reload();
+});
 
 // Добавление контейнера (100% вьюпорта) для окружности
 var addLinearCont = function() {
@@ -282,7 +282,7 @@ if(elGradient) {
 		{ start: [11, 135, 147], stop: [69,104,220] }
 	];
 	// How long for each transition
-	var transition_time = 16;
+	var transition_time = 14;
 
 	// Internal type vars
 	var currentIndex = 0; // where we are in the gradients array

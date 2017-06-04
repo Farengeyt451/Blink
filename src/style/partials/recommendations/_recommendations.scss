@@ -12,11 +12,13 @@
 		text-align: justify;
 	}
 	button {
+		letter-spacing: 8px;
+		text-transform: uppercase;
 		margin: 10vh 0;
 		position: relative;
 		left: 50%;
 		transform: translate(-50%, 0%);
-		font-size: 20px;
+		font-size: 16px;
 		background-color: transparent;
 		cursor: pointer;
 		padding: 15px 50px;
@@ -78,12 +80,12 @@
 	}
 }
 
-@media screen and (min-width: 1px) and (max-width: 1083px) {
+@media screen and (min-width: 1px) and (max-width: 1400px) {
 .recom-s {
 	font-size: 16px;
 	line-height: 29px;
 		button {
-		font-size: 16px;
+		font-size: 14px;
 		}
 		ul {
 			padding-left: 10px;
