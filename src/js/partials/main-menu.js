@@ -22,3 +22,11 @@ if(elNav){
 		toggleClass(document.getElementById("main-nav"), "nav-is-visible");
 	});
 }
+
+// Показ блока контактов
+var elNavCont = document.getElementById("showContacts");
+if(elNavCont){
+	document.getElementById("showContacts").addEventListener("click", function() {
+		toggleClass(document.getElementById("contacts"), "contacts-show");
+	});
+}

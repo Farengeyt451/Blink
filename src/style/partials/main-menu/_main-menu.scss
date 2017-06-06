@@ -547,10 +547,24 @@ img {
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#contacts {
+	background-color: rgba(129, 177, 218, 0.5);
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 100%;
+	transform: translateY(100%);
+	transition: all 1s ease-in-out;
+}
+
+.contacts-show {
+	transform: translateY(-100%) !important;
 }
 
 // Keyframes
-
 @-webkit-keyframes scaleIn {
 	from {
 		-webkit-transform: translateY(-50%) scale(0);
