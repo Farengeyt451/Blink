@@ -30,3 +30,7 @@ if(elNavCont){
 		toggleClass(document.getElementById("contacts"), "contacts-show");
 	});
 }
+
+var closeContacts = function() {
+	document.getElementById("contacts").classList.remove("contacts-show");
+};
