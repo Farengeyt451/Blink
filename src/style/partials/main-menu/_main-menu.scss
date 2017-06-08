@@ -658,9 +658,12 @@ img {
 
 // Контакты
 #contacts {
-	background-color: rgba(129, 177, 218, 0.5);
+	// border-top: 2px solid #666666;
+	font-size: 16px;
+	text-align: center;
+	// background-color: rgba(129, 177, 218, 0.5);
 	width: 100%;
-	height: 100px;
+	// height: 60px;
 	position: absolute;
 	top: 100%;
 	transform: translateY(100%);
@@ -671,11 +674,32 @@ img {
 			}
 		}
 	a {
+		display: inline-block;
+		color: #666666;
 		transition: all 0.2s linear;
 		margin-top: 10px;
-		// background-color: red;
 		text-decoration: none;
 		&:hover {
+			color: #000000;
+		}
+		&:focus {
+		}
+		&:active {
+		}
+	}
+	p {
+		margin: 0;
+		text-align: center;
+		line-height: 52px;
+	}
+	img {
+		border-radius: 50px;
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		margin: 10px 50px;
+		&:hover {
+			background-color: #85B07D;
 		}
 	}
 }
@@ -685,6 +709,7 @@ img {
 }
 
 .close-contacts {
+z-index: 1;
 visibility: hidden;
 position: absolute;
 right: 0;
@@ -694,7 +719,7 @@ color: #FFFFFF;
 height: 30px;
 width: 30px;
 border:0;
-background: url(../img/eye-close.svg) no-repeat;
+background: url(../img/icons/eye-close.svg) no-repeat;
 	&::before {
 		display: block;
 		color: rgba(255, 255, 255, 1);
