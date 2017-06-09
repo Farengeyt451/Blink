@@ -7,9 +7,9 @@ var x = screen.width;
 var y = screen.height;
 
 // Перезагрузка страницы при смене оринетации вьюпорта
-// window.addEventListener("orientationchange", function() {
-// 		location.reload();
-// });
+window.addEventListener("orientationchange", function() {
+		location.reload();
+});
 
 // Добавление контейнера (100% вьюпорта) для окружности
 var addLinearCont = function() {
