@@ -164,8 +164,9 @@ img {
 			-webkit-transition: color 0.2s;
 			-moz-transition: color 0.2s;
 			transition: color 0.2s;
-			@media screen and (min-width: 301px) and (max-width: 1400px) {
+			@media screen and (max-width: 1200px) {
 				font-size: 16px;
+				color: rgba(255, 255, 255, 0.8);
 			}
 			@media screen and (min-width: 1px) and (max-width: 300px) {
 				font-size: 14px;
@@ -265,6 +266,11 @@ img {
 					transition: transform 0.15s 0.3s;
 				}
 			}
+		@media screen and (max-width: 1200px) {
+				&.active {
+					color: rgba(255, 255, 255, 1);
+				}
+			}
 		}
 		span {
 			opacity: 1;
@@ -279,19 +285,17 @@ img {
 			-webkit-transition: -webkit-transform 0.2s;
 			-moz-transition: -moz-transform 0.2s;
 			transition: transform 0.2s;
-			@media screen and (max-height: 800px) and (max-width: 1400px) {
-			// background-color: rgba(133,176,125, 1);
-			// text-align: center;
-			// padding: 0 15px;
-			// margin: 5px 0;
-			// text-shadow: 0 0 3px #FFFFFF;
+			@media screen and (max-width: 1200px) {
+			background-color: rgba(133,176,125, 1);
+			text-align: center;
+			padding: 0 15px;
+			margin: 5px 0;
 			}
 		}
 	}
 }
 
 .no-touch .cd-stretchy-nav.nav-is-visible ul a:hover {
-	// color: #000000;
 	text-decoration: none;
 	&::after {
 		opacity: 1;
