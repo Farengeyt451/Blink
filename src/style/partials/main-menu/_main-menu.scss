@@ -159,7 +159,7 @@ img {
 			height: 50px;
 			line-height: 50px;
 			padding: 0 calc(1em + 60px) 0 1em;
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(255, 255, 255, 0.8);
 			font-size: 18px;
 			-webkit-transition: color 0.2s;
 			-moz-transition: color 0.2s;
@@ -192,7 +192,7 @@ img {
 				content: '';
 				position: absolute;
 				width: 3px;
-				height: 32px;
+				height: 50px !important;
 				top: 50%;
 				right: 60px;
 				-webkit-transform: translateX(3px) translateY(-50%) scaleY(0);
@@ -250,7 +250,7 @@ img {
 				transition: opacity 0.2s;
 			}
 			&.active { 
-				color: #077665;
+				color: rgba(255, 255, 255, 1);
 				// font-weight: bold;
 				&::after {
 					opacity: 1;
@@ -273,6 +273,10 @@ img {
 			}
 		}
 		span {
+			background-color: rgba(133,176,125, 1);
+			text-align: center;
+			padding: 0 15px;
+			margin: 5px 0;
 			opacity: 1;
 			-webkit-transform: translateX(0);
 			-moz-transform: translateX(0);
