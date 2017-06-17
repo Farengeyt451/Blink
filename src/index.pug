@@ -33,6 +33,16 @@ html.no-js(lang="ru")
 							span#showContacts Контакты
 				span.stretchy-nav-bg(aria-hidden="true")
 		main.cd-main-content
+			#myModal.modal
+				.modal-content
+					.modal-header
+						span.close ×
+						h2 Modal Header
+					.modal-body
+						p Some text in the Modal Body
+						p Some other text...
+					.modal-footer
+					h3 Modal Footer
 			#contacts
 				a(href="javascript:closeContacts();").close-contacts
 				.row
@@ -43,6 +53,8 @@ html.no-js(lang="ru")
 							img(src="img/icons/google-plus.svg" alt="google-plus-icon")
 						a(href="skype:strannik11.92?call" target="_blank")
 							img(src="img/icons/skype.svg" alt="skype-icon")
+						a#myBtn(href="#")
+							img(src="img/icons/heart.svg" alt="heart-icon")
 					.col-sm-4
 						p
 							a(href="http://black-sky.github.io/" target="_blank") &copy;Alexander Kislov
