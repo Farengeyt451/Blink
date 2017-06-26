@@ -1,8 +1,8 @@
 {
-	"name": "EmptyProject",
-	"version": "0.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "Blink",
+	"version": "1.0.0",
+	"description": "Exercises to relieve fatigue from the eyes",
+	"main": "index.html",
 	"author": "Alexander Kislov",
 	"license": "ISC",
 	"devDependencies": {

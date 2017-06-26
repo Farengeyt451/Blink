@@ -1,21 +1,21 @@
 {
-  "name": "EmptyProject",
-  "description": "",
-  "main": "index.js",
-  "authors": [
-    "Alexander Kislov"
-  ],
-  "license": "ISC",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "bootstrap": "v4.0.0-alpha.5"
-  }
+	"name": "Blink",
+	"description": "Exercises to relieve fatigue from the eyes",
+	"main": "index.html",
+	"authors": [
+		"Alexander Kislov"
+	],
+	"license": "ISC",
+	"homepage": "https://black-sky.github.io/blink/",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"bootstrap": "v4.0.0-alpha.5"
+	}
 }
