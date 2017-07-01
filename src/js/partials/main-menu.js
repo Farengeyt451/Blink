@@ -39,12 +39,16 @@ var closeContacts = function() {
 var modalDonate = document.getElementById("myModal");
 var btnDonate = document.getElementById("myBtn");
 var spanDonate = document.getElementsByClassName("close")[0];
-btnDonate.onclick = function() {
-		modalDonate.style.display = "block";
-};
-spanDonate.onclick = function() {
+if(btnDonate){
+	btnDonate.onclick = function() {
+	modalDonate.style.display = "block";
+	};
+}
+if(spanDonate){
+	spanDonate.onclick = function() {
 		modalDonate.style.display = "none";
-};
+	};
+}
 window.onclick = function(event) {
 		if (event.target == modalDonate) {
 				modalDonate.style.display = "none";

@@ -1,9 +1,9 @@
 // Импорт бутстрап сетки
-@import "../../bower_components/bootstrap/scss/_variables.scss";
-@import "../../bower_components/bootstrap/scss/_mixins.scss";
-@import "../../bower_components/bootstrap/scss/_normalize.scss";
-@import "../../bower_components/bootstrap/scss/_reboot.scss";
-@import "../../bower_components/bootstrap/scss/_grid.scss";
+@import "partials/grid/_variables.scss";
+@import "partials/grid/_mixins.scss";
+@import "partials/grid/_normalize.scss";
+@import "partials/grid/_reboot.scss";
+@import "partials/grid/_grid.scss";
 
 // Импорт моих переменных и шрифтов
 @import "partials/_my-variables.scss";
