@@ -1,6 +1,6 @@
 * {
-	font-family: "Ubuntu", sans-serif;
 	box-sizing: border-box;
+	font-family: "Ubuntu", sans-serif;
 	&::after, &::before {
 		box-sizing: border-box;
 	}
@@ -11,80 +11,78 @@ img {
 }
 
 .cd-stretchy-nav {
-	font-size: 24px;
-	position: fixed;
-	z-index: 2;
-	top: 10%;
-	right: 5%;
-	pointer-events: none;
 	animation: shake-with-delay 6s 3s 2;
+	font-size: 24px;
+	pointer-events: none;
+	position: fixed;
+	right: 5%;
+	top: 10%;
+	z-index: 2;
 	.stretchy-nav-bg {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		right: 0;
-		width: 60px;
-		height: 60px;
-		border-radius: 30px;
 		background: #85B07D;
+		border-radius: 30px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-		-webkit-transition: height 0.2s, box-shadow 0.2s;
-		-moz-transition: height 0.2s, box-shadow 0.2s;
+		height: 60px;
+		position: absolute;
+		right: 0;
+		top: 0;
 		transition: height 0.2s, box-shadow 0.2s;
+		width: 60px;
+		z-index: 1;
 	}
 	&.nav-is-visible {
 		pointer-events: auto;
 		.stretchy-nav-bg {
-			height: 100%;
 			box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+			height: 100%;
 		}
 	}
 }
 
 .cd-nav-trigger {
-	position: absolute;
-	z-index: 3;
-	top: 0;
-	right: 0;
-	height: 60px;
-	width: 60px;
 	border-radius: 50%;
-	overflow: hidden;
-	white-space: nowrap;
 	color: transparent;
+	height: 60px;
+	overflow: hidden;
 	pointer-events: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
 	transition: transform 1s linear;
+	white-space: nowrap;
+	width: 60px;
+	z-index: 3;
 	span {
+		background-color: #ffffff;
+		height: 2px;
 		position: absolute;
 		width: 16px;
-		height: 2px;
-		background-color: #ffffff;
 		&::after, &::before {
+			background-color: #ffffff;
+			height: 2px;
 			position: absolute;
 			width: 16px;
-			height: 2px;
-			background-color: #ffffff;
 		}
-		left: 50%;
-		top: 50%;
 		bottom: auto;
+		left: 50%;
 		right: auto;
+		top: 50%;
 		transform: translateX(-50%) translateY(-50%);
 		transition: background-color 0.2s;
 		&::after {
-			content: '';
-			top: 0;
-			left: 0;
 			backface-visibility: hidden;
+			content: '';
+			left: 0;
+			top: 0;
 			transition: transform 0.2s;
 		}
 		&::before {
-			content: '';
-			top: 0;
-			left: 0;
 			backface-visibility: hidden;
-			transition: transform 0.2s;
+			content: '';
+			left: 0;
+			top: 0;
 			transform: translateY(-6px);
+			transition: transform 0.2s;
 		}
 		&::after {
 			transform: translateY(6px);
@@ -108,50 +106,50 @@ img {
 
 .cd-stretchy-nav {
 	ul {
-		position: relative;
-		z-index: 2;
-		padding: 60px 0 0;
-		visibility: hidden;
-		transition: visibility 0.3s;
-		text-align: right;
 		list-style-type: none;
+		padding: 60px 0 0;
+		position: relative;
+		text-align: right;
+		transition: visibility 0.3s;
+		visibility: hidden;
+		z-index: 2;
 		a {
-			text-decoration: none;
-			position: relative;
+			color: rgba(255, 255, 255, 0.8);
 			display: block;
+			font-size: 18px;
 			height: 50px;
 			line-height: 50px;
 			padding: 0 calc(1em + 60px) 0 1em;
-			color: rgba(255, 255, 255, 0.8);
-			font-size: 18px;
+			position: relative;
+			text-decoration: none;
 			transition: color 0.2s;
 			@media screen and (max-width: 1200px) {
-				font-size: 16px;
 				color: rgba(255, 255, 255, 0.8);
+				font-size: 16px;
 			}
 			@media screen and (min-width: 1px) and (max-width: 300px) {
 				font-size: 14px;
 			}
 			&::after {
+				background: url(../img/cd-sprite-1.svg) no-repeat 0 0;
 				content: '';
-				position: absolute;
 				height: 32px;
-				width: 32px;
+				opacity: .8;
+				position: absolute;
 				right: 12px;
 				top: 50%;
 				transform: translateY(-50%) scale(0);
-				opacity: .8;
-				background: url(../img/cd-sprite-1.svg) no-repeat 0 0;
+				width: 32px;
 			}
 			&::before {
-				content: '';
-				position: absolute;
-				width: 3px;
-				height: 50px !important;
-				top: 50%;
-				right: 60px;
-				transform: translateX(3px) translateY(-50%) scaleY(0);
 				background-color: #077665;
+				content: '';
+				height: 50px !important;
+				position: absolute;
+				right: 60px;
+				top: 50%;
+				transform: translateX(3px) translateY(-50%) scaleY(0);
+				width: 3px;
 			}
 		}
 		li {
@@ -181,8 +179,8 @@ img {
 		visibility: visible;
 		a {
 			&::after {
-				transform: translateY(-50%) scale(1);
 				animation: scaleIn 0.15s backwards;
+				transform: translateY(-50%) scale(1);
 				transition: opacity 0.2s;
 			}
 			&.active {
@@ -202,19 +200,19 @@ img {
 			}
 		}
 		span {
+			animation: slideIn 0.15s backwards;
 			background-color: rgba(133,176,125, 1);
-			text-align: center;
-			padding: 0 15px;
 			margin: 5px 0;
 			opacity: 1;
+			padding: 0 15px;
+			text-align: center;
 			transform: translateX(0);
-			animation: slideIn 0.15s backwards;
 			transition: transform 0.2s;
 			@media screen and (max-width: 1200px) {
 			background-color: rgba(133,176,125, 1);
-			text-align: center;
-			padding: 0 15px;
 			margin: 5px 0;
+			padding: 0 15px;
+			text-align: center;
 			}
 		}
 	}
@@ -260,27 +258,27 @@ img {
 	}
 	&.add-content {
 		bottom: 50px;
-		top: auto;
 		left: 50%;
 		right: auto;
+		top: auto;
 		transform: translateX(-50%);
 		width: 300px;
 		.stretchy-nav-bg {
+			background-color: #8ac57f;
 			left: 50%;
 			right: auto;
 			transform: translateX(-50%);
-			background-color: #8ac57f;
 			transition: width 0.2s, box-shadow 0.2s;
 		}
 		&.nav-is-visible .stretchy-nav-bg {
-			width: 100%;
 			box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+			width: 100%;
 		}
 		.cd-nav-trigger {
+			background-color: #9acd91;
 			left: 50%;
 			right: auto;
 			transform: translateX(-50%);
-			background-color: #9acd91;
 			span {
 				background-color: transparent;
 				&::before {
@@ -318,15 +316,15 @@ img {
 				}
 			}
 			a {
-				padding: 0;
 				height: 60px;
+				padding: 0;
 				width: 100%;
 				&::after {
-					top: 50%;
+					background-image: url(../img/cd-sprite-2.svg);
 					left: 22px;
 					right: auto;
+					top: 50%;
 					transform: translateY(-50%) scale(0);
-					background-image: url(../img/cd-sprite-2.svg);
 				}
 			}
 			li {
@@ -355,32 +353,32 @@ img {
 			transform: translateY(-50%) scale(1);
 		}
 		ul span {
-			position: absolute;
-			left: 0;
-			top: -20px;
-			width: 100%;
-			padding: 0.6em 0;
-			opacity: 0;
-			visibility: hidden;
 			background-color: rgba(0, 0, 0, 0.8);
 			border-radius: 2px;
 			font-size: 1.2rem;
+			left: 0;
 			line-height: 1;
-			white-space: nowrap;
+			opacity: 0;
+			padding: 0.6em 0;
+			position: absolute;
 			text-align: center;
-			transition: opacity 0.2s, visibility 0.2s;
+			top: -20px;
 			transform: translateX(0);
+			transition: opacity 0.2s, visibility 0.2s;
+			visibility: hidden;
+			white-space: nowrap;
+			width: 100%;
 			&::after {
-				content: '';
-				position: absolute;
-				top: 100%;
-				left: 50%;
-				right: auto;
-				transform: translateX(-50%);
-				height: 0;
-				width: 0;
-				border: 4px solid transparent;
 				border-top-color: rgba(0, 0, 0, 0.8);
+				border: 4px solid transparent;
+				content: '';
+				height: 0;
+				left: 50%;
+				position: absolute;
+				right: auto;
+				top: 100%;
+				transform: translateX(-50%);
+				width: 0;
 			}
 		}
 		&.nav-is-visible ul span {
@@ -390,22 +388,20 @@ img {
 }
 
 // Main content basic style
-
 .cd-main-content {
-	position: relative;
-	z-index: 1;
-	min-height: 100vh;
-	width: 100vw;
-	padding: 100px 0;
 	background-image: url(../img/eye.svg);
 	background-position: center center;
-	background-size: cover;
 	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
 	overflow: hidden;
+	padding: 100px 0;
+	position: relative;
+	width: 100vw;
+	z-index: 1;
 }
 
 // Keyframes
-
 @keyframes scaleIn {
 	from {
 		transform: translateY(-50%) scale(0);
@@ -463,31 +459,31 @@ img {
 }
 
 .cd-stretchy-nav-hide {
+	opacity: 0;
 	transition: opacity 0.5s linear;
 	visibility: hidden;
-	opacity: 0;
 }
 
 // Контакты
 #contacts {
 	font-size: 16px;
-	text-align: center;
-	width: 100%;
 	position: absolute;
+	text-align: center;
 	top: 100%;
 	transform: translateY(100%);
 	transition: all 1s ease-in-out;
+	width: 100%;
 		&:hover {
 			.close-contacts {
 				visibility: visible !important;
 			}
 		}
 	a {
-		display: inline-block;
 		color: #666666;
-		transition: all 0.2s linear;
+		display: inline-block;
 		margin-top: 10px;
 		text-decoration: none;
+		transition: all 0.2s linear;
 		&:hover {
 			color: #000000;
 		}
@@ -499,17 +495,17 @@ img {
 		}
 	}
 	p {
+		line-height: 52px;
 		margin: 0;
 		text-align: center;
-		line-height: 52px;
 	}
 	img {
-		transition: all 0.2s ease-in-out;
 		border-radius: 50px;
-		width: 32px;
-		height: 32px;
 		display: inline-block;
+		height: 32px;
 		margin: 10px 40px;
+		transition: all 0.2s ease-in-out;
+		width: 32px;
 		&:hover {
 			background-color: #5EC3DC;
 		}
@@ -540,50 +536,49 @@ img {
 }
 
 .close-contacts {
-z-index: 1;
-visibility: hidden;
-position: absolute;
-right: 0;
-top: 0;
-text-align: center;
+background: url(../img/icons/eye-close.svg) no-repeat;
+border:0;
 color: #FFFFFF;
 height: 30px;
+position: absolute;
+right: 0;
+text-align: center;
+top: 0;
+visibility: hidden;
 width: 30px;
-border:0;
-background: url(../img/icons/eye-close.svg) no-repeat;
+z-index: 1;
 	&::before {
-		display: block;
 		color: rgba(255, 255, 255, 1);
 		content: "";
+		display: block;
 		font-size: 20px;
 	}
 }
 
 // Стили модального окна доната
 .modal {
+	background-color: rgba(0, 0, 0, 0.2);
 	display: none;
-	position: fixed;
-	z-index: 1;
-	padding-top: 25vh;
+	height: 100%;
 	left: 0;
+	overflow: auto;
+	padding-top: 25vh;
+	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
 
 .modal-content {
-	position: relative;
+	animation-duration: 0.4s;
+	animation-name: animatetop;
 	background-color: #fefefe;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin: auto;
 	padding: 0;
-	border: 1px solid #888;
+	position: relative;
 	width: 550px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	animation-name: animatetop;
-	animation-duration: 0.4s;
 }
 
 @keyframes animatetop {
@@ -599,22 +594,22 @@ background: url(../img/icons/eye-close.svg) no-repeat;
 }
 
 .close {
-	line-height: 36px;
 	color: #666666;
 	float: right;
 	font-size: 30px;
 	font-weight: bold;
+	line-height: 36px;
 	&:hover, &:focus {
 		color: #000;
-		text-decoration: none;
 		cursor: pointer;
+		text-decoration: none;
 	}
 }
 
 .modal-header {
-	padding: 10px 16px;
 	background-image: url(../img/gplaypattern.png);
-	color: #666666;
+	color: #666;
+	padding: 10px 16px;
 	h2 {
 		margin: 0;
 	}
@@ -627,9 +622,9 @@ background: url(../img/icons/eye-close.svg) no-repeat;
 }
 
 .modal-footer {
-	padding: 2px 16px;
 	background-color: #A5DCA1;
-	color: white;
+	color: #FFF;
+	padding: 2px 16px;
 	h3 {
 		margin: 0;
 	}
@@ -637,31 +632,31 @@ background: url(../img/icons/eye-close.svg) no-repeat;
 
 // Стили таблицы доната
 .tg {
-	color: #666666;
-	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
+	color: #666;
+	width: 100%;
 	td {
-		font-size: 18px;
-		padding: 10px 5px;
-		border-style: solid;
-		border-width: 0px;
-		overflow: hidden;
-		word-break: normal;
-		border-top-width: 2px;
 		border-bottom-width: 2px;
+		border-style: solid;
+		border-top-width: 2px;
+		border-width: 0px;
+		font-size: 18px;
+		overflow: hidden;
+		padding: 10px 5px;
+		word-break: normal;
 
 	}
 	th {
+		border-bottom-width: 2px;
+		border-style: solid;
+		border-top-width: 2px;
+		border-width: 0px;
 		font-size: 18px;
 		font-weight: normal;
-		padding: 10px 5px;
-		border-style: solid;
-		border-width: 0px;
 		overflow: hidden;
+		padding: 10px 5px;
 		word-break: normal;
-		border-top-width: 2px;
-		border-bottom-width: 2px;
 
 	}
 	.tg-baqh {
@@ -669,8 +664,8 @@ background: url(../img/icons/eye-close.svg) no-repeat;
 		vertical-align: top;
 	}
 	.tg-yw4l {
-		padding-left: 16px;
 		border-color: #666666;
+		padding-left: 16px;
 		vertical-align: center;
 	}
 }

@@ -3,50 +3,60 @@
 	background: #836997;
 }
 
+// Контейнер с таймером
 .timer-cont {
-	position: absolute;
-	width: 50px;
+	background-color: transparent;
+	font-size: 40px;
 	height: 50px;
-	background-color: #FFF;
-	left: 0;
-	top: 0;
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -250%);
+	transition: opacity 1.5s ease-in-out;
+	width: 50px;
 	z-index: 1;
+	span {
+		color: rgba(255, 255, 255, 0.7);
+		display: block;
+		height: 100%;
+		text-align: center;
+		width: 100%;
+	}
 }
 
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
 	height: 100vh;
-	width: 100vw;
-	padding: 0;
 	overflow: hidden;
+	padding: 0;
+	width: 100vw;
 }
 
 // Контейнер (100% вьюпорта) для окружности
 .linear-cont {
-	overflow: visible;
+	backface-visibility: hidden;
 	background-color: transparent;
 	height: 100vh;
-	width: 100vw;
+	left: 0%;
+	overflow: visible;
+	perspective: 1000;
 	position: absolute;
 	top: 0%;
-	left: 0%;
 	transform: transale3d(0,0,0);
-	backface-visibility: hidden;
-	perspective: 1000;
+	width: 100vw;
 }
 
 // Окружность; выровнена по центру вьюпорта
 .main-circle {
-	// transform: transale3d(0,0,0);
-	// background-color: #E57373;
 	background-color: rgba(229, 229, 229, 1);
 	border-radius: 50%;
 	height: $diameter;
-	width: $diameter;
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	transform: translate(-50%, -50%);
+	width: $diameter;
 }
 
 .main-circle-hide {
@@ -69,3 +79,21 @@
 	animation: orbit-clockwise-help-4x3 2s linear 1s normal forwards running,
 						 orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running;
 	}
+
+@media screen and (min-width: 1px) and (max-width: 1083px) {
+	.timer-cont {
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 1084px) and (max-width: 1643px) {
+	.timer-cont {
+		font-size: 35px;
+	}
+}
+
+	@media screen and (min-width: 1644px) and (max-width: 3008px) {
+		.timer-cont {
+			font-size: 40px;
+		}
+}

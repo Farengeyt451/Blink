@@ -1,14 +1,14 @@
-// -------------------------
-// JS код для страницы блинк
-// -------------------------
+//--------------------------
+//-JS код для страницы блинк
+//--------------------------
 
-// Определение ширины дисплея
+// Определение ширины и высоты дисплея
 var x = screen.width;
 var y = screen.height;
 
 // Перезагрузка страницы при смене оринетации вьюпорта
 window.addEventListener("orientationchange", function() {
-		location.reload();
+	location.reload();
 });
 
 // Добавление контейнера (100% вьюпорта) для окружности
@@ -43,6 +43,8 @@ var showBtn = function() {
 // Запуск анимации мигания окружности
 var addCircleBlinking = function() {
 	document.getElementById("anim-circle").classList.add("circle-blinking");
+	startCount();
+	showTimer();
 };
 
 // Запуск анимации мигания окружности после круговой анимации
@@ -51,11 +53,14 @@ var addCircleOrbitBlinking = function() {
 	document.getElementById("anim-circle").classList.remove("orbit-circle-4x3");
 	document.getElementById("anim-circle").classList.add("main-circle");
 	document.getElementById("anim-circle").classList.add("circle-blinking");
+	startCount();
+	showTimer();
 };
 
 // Удаление анимации мигания окружности
 var removeCircleBlinking = function() {
 	document.getElementById("anim-circle").classList.remove("circle-blinking");
+	setTimeout(hideTimer, 5000);
 };
 
 // Запуск анимации движения окружности (верх - низ)
@@ -133,7 +138,6 @@ if(elAnim){
 	startanim.onclick = function() {
 		setTimeout(addLinearCont, 500);
 		setTimeout(addMainCircle, 500);
-		// Скрытие контейнера таймера
 		setTimeout(addCircleBlinking, 1000);
 		setTimeout(removeCircleBlinking, 16000);
 		setTimeout(hideBtn, 500);
@@ -273,45 +277,34 @@ if(elAnim){
 // Генератор градиентов
 var elGradient = document.getElementById("gradient");
 if(elGradient) {
-	// target to give background to
 	var $div = document.getElementById("gradient");
-	// Rgb vals of the gradients
 	var gradients = [
 		{ start: [11,72,107], stop: [103,178,111] },
 		{ start: [24, 90, 157], stop: [68,160,141] },
 		{ start: [11, 135, 147], stop: [69,104,220] }
 	];
-	// How long for each transition
 	var transition_time = 14;
-
-	// Internal type vars
-	var currentIndex = 0; // where we are in the gradients array
-	var nextIndex = 1; // what index of the gradients array is next
-	var steps_count = 0; // steps counter
-	var steps_total = Math.round(transition_time*60); // total amount of steps
+	var currentIndex = 0;
+	var nextIndex = 1;
+	var steps_count = 0;
+	var steps_total = Math.round(transition_time*60);
 	var rgb_steps = {
 		start: [0,0,0],
 		stop: [0,0,0]
-	}; // How much to alter each rgb value
+	};
 	var rgb_values = {
 		start: [0,0,0],
 		stop: [0,0,0]
-	}; // The current rgb values, gets altered by rgb steps on each interval
-	var prefixes = ["-webkit-","-moz-","-o-","-ms-",""]; // for looping through adding styles
-	var div_style = $div.style; // short cut to actually adding styles
+	};
+	var prefixes = ["-webkit-","-moz-","-o-","-ms-",""];
+	var div_style = $div.style;
 	var color1, color2;
-
-	// Sets next current and next index of gradients array
 	function set_next(num) {
 		return (num + 1 < gradients.length) ? num + 1 : 0;
 	}
-
-	// Work out how big each rgb step is
 	function calc_step_size(a,b) {
 		return (a - b) / steps_total;
 	}
-
-	// Populate the rgb_values and rgb_steps objects
 	function calc_steps() {
 		for (var key in rgb_values) {
 			if (rgb_values.hasOwnProperty(key)) {
@@ -322,10 +315,7 @@ if(elGradient) {
 			}
 		}
 	}
-
-	// Update current rgb vals, update DOM element with new CSS background
 	function updateGradient(){
-		// update the current rgb vals
 		for (var key in rgb_values) {
 			if (rgb_values.hasOwnProperty(key)) {
 				for(var i = 0; i < 3; i++) {
@@ -333,58 +323,52 @@ if(elGradient) {
 				}
 			}
 		}
-
-		// Generate CSS rgb values
 		var t_color1 = "rgb("+(rgb_values.start[0] | 0)+","+(rgb_values.start[1] | 0)+","+(rgb_values.start[2] | 0)+")";
 		var t_color2 = "rgb("+(rgb_values.stop[0] | 0)+","+(rgb_values.stop[1] | 0)+","+(rgb_values.stop[2] | 0)+")";
-
-		// Has anything changed on this interation
 		if (t_color1 != color1 || t_color2 != color2) {
-
-			// Update cols strings
 			color1 = t_color1;
 			color2 = t_color2;
-
-			// Update DOM element style attribute
 			div_style.backgroundImage = "-webkit-gradient(linear, left bottom, right top, from("+color1+"), to("+color2+"))";
 			for (var i = 0; i < 4; i++) {
 				div_style.backgroundImage = prefixes[i]+"linear-gradient(45deg, "+color1+", "+color2+")";
 			}
 		}
-
-		// We did another step
 		steps_count++;
-		// Did we do too many steps?
 		if (steps_count > steps_total) {
-			// Reset steps count
 			steps_count = 0;
-			// Set new indexs
 			currentIndex = set_next(currentIndex);
 			nextIndex = set_next(nextIndex);
-			// Calc steps
 			calc_steps();
 		}
-
 		if (div_style.backgroundImage.indexOf("gradient") != -1) {
 			window.requestAnimationFrame(updateGradient);
 		}
 	}
-
-	// Initial step calc
 	calc_steps();
-
-	// Start
 	window.requestAnimationFrame(updateGradient);
 }
 
-var count=20;
-var counter = setInterval(timer, 1000);
-function timer() {
-	count=count-1;
-	if (count <= 0)
-	{
-		clearInterval(counter);
-		return;
+// Запуск таймера для мигания окружности
+function startCount() {
+	var count = 21;
+	var counter = setInterval(timer, 1000);
+	function timer() {
+		count = count - 1;
+		if (count <= 0) {
+			clearInterval(counter);
+			document.getElementById("timer").innerHTML = "";
+			return;
+		}
+	document.getElementById("timer").innerHTML = count;
 	}
-document.getElementById("timer").innerHTML=count + " secs"; // watch for spelling
+}
+
+// Показать контейнер с таймером
+function showTimer() {
+	document.getElementsByClassName("timer-cont")[0].style.opacity = "1";
+}
+
+// Спрятать контейнер с таймером
+function hideTimer() {
+	document.getElementsByClassName("timer-cont")[0].style.opacity = "0";
 }
