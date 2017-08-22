@@ -167,7 +167,7 @@ if(elAnim){
 			setTimeout(removeCircleBlinking, 306000);
 
 			setTimeout(addCircleSnakeRightLeft, 311000);
-			
+
 			setTimeout(removeContCircle, 342000);
 			setTimeout(showBtn, 343000);
 		}
