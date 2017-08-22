@@ -3,6 +3,16 @@
 	background: #836997;
 }
 
+.timer-cont {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #FFF;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
 	height: 100vh;
@@ -48,7 +58,7 @@
 .orbit-circle {
 	@extend .main-circle;
 	// Анимация для перемещения окружности вверх перед началом круговой анимации и вниз - после завершения
-	animation: orbit-clockwise-help 2s linear 1s normal forwards running, 
+	animation: orbit-clockwise-help 2s linear 1s normal forwards running,
 						 orbit-counterclock-wise-help 2s linear 36s reverse forwards running;
 	}
 
@@ -56,6 +66,6 @@
 .orbit-circle-4x3 {
 	@extend .main-circle;
 	// Анимация для перемещения окружности вверх перед началом круговой анимации и вниз - после завершения
-	animation: orbit-clockwise-help-4x3 2s linear 1s normal forwards running, 
+	animation: orbit-clockwise-help-4x3 2s linear 1s normal forwards running,
 						 orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running;
 	}
