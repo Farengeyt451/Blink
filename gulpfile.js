@@ -80,7 +80,7 @@ gulp.task("html:build", function () {
 		.pipe(plumber())
 		.pipe(pug({
 			pretty: true
-		}))		
+		}))
 		.pipe(gulpIf(isDevelopment, gulp.dest(path.build.html), gulp.dest(path.production.html)))
 		.pipe(bs.stream());
 });
