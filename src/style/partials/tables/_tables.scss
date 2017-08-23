@@ -1,17 +1,16 @@
 .mg-top {
-	margin-top: 10vh;
+	margin: 50px auto;
 	text-align: center;
 	h2 {
-		font-size: 30px;
 		font-weight: bold;
-		padding-bottom: 5%;
+		text-align: center;
 	}
 }
 .table-1 {
 text-align: justify;
 position: relative;
 background-color: #EFCA73;
-margin: 50px 0;
+margin:0 0 80px 0;
 font-size: 20px;
 line-height: 33px;
 	img {
@@ -21,7 +20,7 @@ line-height: 33px;
 		left: 0%;
 		z-index: 1;
 		height: 500px;
-		border: 2px solid #666666;
+		border: 2px solid #666;
 	}
 	button {
 	font-size: 18px;
@@ -39,7 +38,13 @@ line-height: 33px;
 	outline: none;
 	transition: all 0.5s linear;
 	border: 2px solid transparent;
-	color: #666666;
+	color: #666;
+	&:hover, &:focus {
+		cursor: pointer;
+		a {
+			color: #FFF;
+		}
+	}
 	a {
 		transition: all 0.5s linear;
 		display: block;
@@ -49,11 +54,7 @@ line-height: 33px;
 		height: 100%;
 		}
 		&:hover {
-			border-top: 2px dotted #666666;
-			color: #424242;
-			background: #EFCA73;
-		}
-		&:active {
+			border-top: 2px dotted #666;
 			color: #424242;
 			background: #EFCA73;
 		}
@@ -61,12 +62,15 @@ line-height: 33px;
 			color: #424242;
 			background: #EFCA73;
 		}
+		&:active {
+			color: #424242;
+			background: #EFCA73;
+		}
 	}
 	h4 {
 	padding: 20px 0;
 	text-align: center;
-	cursor: pointer;
-	display:block;
+	display: block;
 		&:hover img {
 			display: block;
 		}
@@ -83,10 +87,10 @@ background-color: #74C1FF;
 		&:hover {
 			background: #74C1FF;
 		}
-		&:active {
+		&:focus {
 			background: #74C1FF;
 		}
-		&:focus {
+		&:active {
 			background: #74C1FF;
 		}
 	}
@@ -100,10 +104,10 @@ margin-bottom: 100px;
 		&:hover {
 			background: #9176FF;
 		}
-		&:active {
+		&:focus {
 			background: #9176FF;
 		}
-		&:focus {
+		&:active {
 			background: #9176FF;
 		}
 	}

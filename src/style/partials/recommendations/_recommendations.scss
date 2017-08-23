@@ -26,18 +26,18 @@
 		text-transform: uppercase;
 		transform: translate(-50%, 0%);
 		transition: all 0.5s linear;
-			&:hover {
-				color: #494949;
-				background: #FFF;
-			}
-			&:active {
-				color: #494949;
-				background: #FFF;
-			}
-			&:focus {
-				color: #494949;
-				background: #FFF;
-			}
+		&:hover {
+			color: #494949;
+			background: #FFF;
+		}
+		&:focus {
+			color: #494949;
+			background: #FFF;
+		}
+		&:active {
+			color: #494949;
+			background: #FFF;
+		}
 	}
 	h2 {
 		line-height: 60px;
