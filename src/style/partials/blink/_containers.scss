@@ -28,6 +28,30 @@ $diameter: 5vh;
 	}
 }
 
+// Контейнер с подсказкой
+.tooltip {
+	color: #363636;
+	width: 100vw;
+	padding: 20px 40px;
+	line-height: 25px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+	transition: all 0.3s;
+	p {
+		margin: 0;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.tooltip-hide {
+	left: -100vw;
+}
+
 // Главный контейнер; 100% высоты и ширины вьюпорта
 .main-cont {
 	height: 100vh;
@@ -82,6 +106,20 @@ $diameter: 5vh;
 	animation: orbit-clockwise-help-4x3 2s linear 1s normal forwards running,
 						 orbit-counterclock-wise-help-4x3 2s linear 36s reverse forwards running;
 	}
+
+@media screen and (max-width: 768px) {
+	.tooltip {
+		padding: 5px 20px;
+		line-height: 20px;
+		font-size: 14px;
+		p {
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
 
 @media screen and (min-width: 1px) and (max-width: 1083px) {
 	.timer-cont {

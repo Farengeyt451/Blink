@@ -33,6 +33,12 @@ var hideBtn = function() {
 	document.getElementById("main-nav").classList.add("cd-stretchy-nav-hide");
 };
 
+// Скрытие контейнера подсказок
+var hideTooltip = function() {
+	document.getElementById("tp-hide").classList.add("tooltip-hide");
+	// document.getElementById("main-nav").classList.add("cd-stretchy-nav-hide");
+};
+
 // Открытие кнопки "На главную" и навигации
 var showBtn = function() {
 	document.getElementById("tomain").classList.remove("btn-end-hide");
@@ -141,6 +147,7 @@ if(elAnim){
 		setTimeout(addCircleBlinking, 1000);
 		setTimeout(removeCircleBlinking, 16000);
 		setTimeout(hideBtn, 500);
+		setTimeout(hideTooltip, 500);
 		setTimeout(addTopBotAnim, 22000);
 		setTimeout(addLeftRightAnim, 42000);
 		if(x > 1 && x <= 1083) {
